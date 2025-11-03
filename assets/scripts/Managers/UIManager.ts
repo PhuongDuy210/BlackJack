@@ -38,6 +38,12 @@ export class UIManager extends Component {
     @property(Node)
     private playerCardContainer: Node = null!;
 
+    @property(Label)
+    private playerScoreLabel: Label = null!;
+
+    @property(Label)
+    private dealerScoreLabel: Label = null!;
+
     @property(Node)
     private dealerCardContainer: Node = null!;
 
@@ -51,6 +57,8 @@ export class UIManager extends Component {
         EventManager.instance.gameEvents.on(GameEvent.GAME_ENDED, this.displayResult, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_RESET, this.resetUI, this);
         EventManager.instance.gameEvents.on(GameEvent.DEALER_TURN_END, this.flipDealerCards, this);
+        EventManager.instance.gameEvents.on(GameEvent.LOCK_INPUT, this.lockInput, this);
+        EventManager.instance.gameEvents.on(GameEvent.UNLOCK_INPUT, this.unlockInput, this);
 
         this.resetUI();
     }
@@ -64,6 +72,8 @@ export class UIManager extends Component {
         this.doubleButton.node.active = false;
         this.resultLabel.node.active = false;
         this.resetButton.node.active = false;
+        this.playerScoreLabel.node.active = false;
+        this.dealerScoreLabel.node.active = false;
 
         this.playerCardContainer.removeAllChildren();
         this.dealerCardContainer.removeAllChildren();
@@ -90,7 +100,6 @@ export class UIManager extends Component {
     }
 
     async addCardToParticipant(participant: Participant) {
-        this.lockInput();
         let handArea = null;
         if (participant instanceof Player) {
             handArea = this.playerCardContainer;
@@ -108,6 +117,9 @@ export class UIManager extends Component {
     async animateCardToHand(participant: Participant, handArea: Node): Promise<void> {
         const hand = participant.getHand();
         const displayedCardCount = handArea.children.length;
+        if (displayedCardCount >= hand.length) {
+            return;
+        }
         const latestCardData = hand[displayedCardCount];
 
         // Get or create visual card node
@@ -116,12 +128,15 @@ export class UIManager extends Component {
         card.init(latestCardData);
         
         // Add to scene
+        let scoreLabel;
         if (participant instanceof Player) {
             latestCardData.isFaceDown = false;
             this.playerAnimationInProgress++;
+            scoreLabel = this.playerScoreLabel;
         } else if (participant instanceof Dealer) {
             latestCardData.isFaceDown = (displayedCardCount === 0 && !participant.revealAll);
             this.dealerAnimationInProgress++;
+            scoreLabel = this.dealerScoreLabel;
         }
         handArea.addChild(cardNode);
         
@@ -137,6 +152,7 @@ export class UIManager extends Component {
                 if (!latestCardData.isFaceDown) {
                     await card.flipCard();
                     this.checkRemainingAnimation(participant);
+                    scoreLabel.string = 'Hand Value: ' + participant.getHandValue();
                 }
                 resolve();
             })
@@ -167,38 +183,7 @@ export class UIManager extends Component {
             (this.dealerAnimationInProgress <= 0 && participant instanceof Dealer)) {
             console.log('All animations finished.');
             EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED, participant);
-            this.unlockInput();
         }
-    }
-
-    public updateCardDisplay(hand: Participant) {
-        if (hand instanceof Player) {
-            // Update player card display
-            const cardDataList = hand.getHand();
-            for (let i = 0; i < cardDataList.length; i++) {
-                const cardData = { ...cardDataList[i] }; // Clone to avoid mutating original
-                const cardNode = instantiate(this.cardPrefab);
-                this.playerCardNodes.push(cardNode);
-                cardNode.setPosition((i % 13) * 30, Math.floor(i / 13) * -40, 0);
-                this.playerCardContainer.addChild(cardNode);
-                let card = cardNode.addComponent(Card);
-                card.init(cardData);
-            }
-        } else if (hand instanceof Dealer) {
-            // Update dealer card display
-            const cardDataList = hand.getHand();
-            for (let i = 0; i < cardDataList.length; i++) {
-                const cardData = { ...cardDataList[i] }; // Clone to avoid mutating original
-                cardData.isFaceDown = (i === 0 && !hand.revealAll);
-                
-                const cardNode = instantiate(this.cardPrefab);
-                this.dealerCardNodes.push(cardNode);
-                cardNode.setPosition((i % 13) * 30, Math.floor(i / 13) * -40, 0);
-                this.dealerCardContainer.addChild(cardNode);
-                let card = cardNode.addComponent(Card);
-                card.init(cardData);
-            }
-        }   
     }
 
     private getCardTargetPosition(cardIndex: number): Vec3 {
@@ -218,18 +203,25 @@ export class UIManager extends Component {
         this.standButton.node.active = false;
         this.resetButton.node.active = true;
         this.doubleButton.node.active = false;
+
+        this.playerScoreLabel.node.active = true;
+        this.dealerScoreLabel.node.active = true;
     }
 
     private lockInput() {
+        this.dealButton.interactable = false;
         this.hitButton.interactable = false;
         this.standButton.interactable = false;
         this.doubleButton.interactable = false;
+        this.resetButton.interactable = false;
     }
 
     private unlockInput() {
+        this.dealButton.interactable = true;
         this.hitButton.interactable = true;
         this.standButton.interactable = true;
         this.doubleButton.interactable = true;
+        this.resetButton.interactable = true;
     }
 
 }

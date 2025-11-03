@@ -1,5 +1,4 @@
 import { CardData } from './CardData'; // Your interface
-import { SpriteFrame } from 'cc';
 
 export class Deck {
     private cards: CardData[] = [];

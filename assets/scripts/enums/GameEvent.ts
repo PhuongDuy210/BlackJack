@@ -7,4 +7,6 @@ export enum GameEvent {
     GAME_STARTED = 'game-started',
     GAME_ENDED = 'game-ended',
     GAME_RESET = 'game-reset',
+    LOCK_INPUT = 'lock-input',
+    UNLOCK_INPUT = 'unlock-input',
 }

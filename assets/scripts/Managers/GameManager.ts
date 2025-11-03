@@ -35,6 +35,7 @@ export class GameManager extends Component {
     }
 
     public initialDeal() {
+        EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
         for (let i = 0; i < 2; i++) {
             const playerCardData = this.deckManager.dealCard();
             const dealerCardData = this.deckManager.dealCard();
@@ -47,15 +48,8 @@ export class GameManager extends Component {
             }
         }
 
-        // EventManager.instance.gameEvents.emit(GameEvent.GAME_STARTED);
         EventManager.instance.gameEvents.emit(GameEvent.DEAL_CARD, this.player);
         EventManager.instance.gameEvents.emit(GameEvent.DEAL_CARD, this.dealer);
-
-        // Check for immediate blackjack
-        if (this.player.hasBlackjack() || this.dealer.hasBlackjack()) {
-            this.dealer.revealAll = true;
-            this.endGame();
-        }
     }
 
     public onAnimationFinished(participant: Player | Dealer) {
@@ -63,6 +57,12 @@ export class GameManager extends Component {
         if (this.gameState === GameState.InitialDeal && participant instanceof Player) {
             this.gameState = GameState.PlayerTurn;
             EventManager.instance.gameEvents.emit(GameEvent.GAME_STARTED);
+
+            // Check for immediate blackjack
+            if (this.player.hasBlackjack() || this.dealer.hasBlackjack()) {
+                this.dealer.revealAll = true;
+                this.endGame();
+            }
         }
 
         if (this.gameState === GameState.PlayerTurn && participant instanceof Player) {
@@ -71,13 +71,22 @@ export class GameManager extends Component {
             }
         }
 
-        if (this.gameState === GameState.GameEnd) {
+        if (this.gameState === GameState.PlayerTurnEnd && participant instanceof Player) {
+            this.dealer.revealAll = true;
+            this.dealerPlay();
+        }
+
+        if (this.gameState === GameState.DealerTurnEnd && participant instanceof Dealer) {
+            this.gameState = GameState.GameEnd;
             const result = this.determineWinner();
             EventManager.instance.gameEvents.emit(GameEvent.GAME_ENDED, result);
         }
+
+        EventManager.instance.gameEvents.emit(GameEvent.UNLOCK_INPUT);
     }
 
     public playerHit() {
+        EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
         const cardData = this.deckManager.dealCard();
         if (cardData) {
             this.player.addCard(cardData);
@@ -86,22 +95,23 @@ export class GameManager extends Component {
     }
 
     public playerStand() {
+        EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
         console.log('Player stands with hand:', this.player.getHand());
         this.dealerPlay();
     }
 
     public playerDouble() {
+        EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
         const cardData = this.deckManager.dealCard();
         if (cardData) {
             this.player.addCard(cardData);
             EventManager.instance.gameEvents.emit(GameEvent.DEAL_CARD, this.player);
         }
-
-        this.dealer.revealAll = true;
-        this.dealerPlay();
+        this.gameState = GameState.PlayerTurnEnd;
     }
 
     public dealerPlay() {
+        EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
         this.gameState = GameState.DealerTurn;
         while (this.dealer.shouldHit() && !this.player.isBusted()) {
             const cardData = this.deckManager.dealCard();
@@ -144,7 +154,7 @@ export class GameManager extends Component {
     
     private endGame() {
         EventManager.instance.gameEvents.emit(GameEvent.DEALER_TURN_END);
-        this.gameState = GameState.GameEnd;
+        this.gameState = GameState.DealerTurnEnd;
     }
 
     private resetGame() {

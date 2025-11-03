@@ -11,6 +11,4 @@ export class Player extends Participant {
     public getName(): string {
         return this.name;
     }
-
-    // Add player-specific logic here (e.g., betting, UI interaction)
 }
