@@ -41,9 +41,11 @@ export class GenericPopup extends Component {
         this.animateEntry();
     }
 
-    public show(title: string, message: string, buttons: PopupButtonData[]) {
+    public show(title: string, message: string, buttons: PopupButtonData[], entryAnimation?: PopupAnimationType | null, exitAnimation?: PopupAnimationType | null) {
         this.titleText.string = title;
         this.messageText.string = message;
+        this.entryAnimationType = entryAnimation ? entryAnimation : this.entryAnimationType;
+        this.exitAnimationType = exitAnimation ? exitAnimation : this.exitAnimationType;
 
         this.buttonContainer.removeAllChildren();
 
