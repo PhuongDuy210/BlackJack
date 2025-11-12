@@ -9,6 +9,7 @@ A: 1 và 11
 	+ Hit: rút thêm 1 lá, sau khi rút không kết thúc lượt
 	+ Double: nhân đôi số cược, rút thêm 1 lá và kết thúc lượt
 	+ Stand: không rút và kết thúc lượt. Player có thể Stand bất cứ lúc nào, không có tổng giá trị bài tối thiểu cần đạt được
+	+ Split: player có thể tách 2 lá hiện tại của mình thành 2 tụ khác nhau với điều kiện là 2 lá phải cùng cấp (hiện tại cho mục đích test, player luôn luôn được phép split)
 	⁃	Nếu player tổng giá trị bài trong tay vượt quá 21 (> 21) thì sẽ kết thúc lượt và bị tính là thua bất kể giá trị trong tay của Dealer là bao nhiêu
 	⁃	Sau khi Player kết thúc lượt sẽ đến lượt của Dealer. Dealer luôn rút bài cho đến khi giá trị bài trong tay đạt ít nhất là 17, sau đó Dealer kết thúc lượt
 	⁃	Sau khi Dealer kết thúc lượt, cả 2 bên cùng mở bài và so sánh tổng giá trị, bên nào cao hơn sẽ thắng
