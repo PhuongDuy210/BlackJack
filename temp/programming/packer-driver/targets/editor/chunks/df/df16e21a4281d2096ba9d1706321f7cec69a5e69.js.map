@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///Users/phuongduy/CardDeck/assets/scripts/AudioSystem/SFXID.ts"],"names":["SFXID"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,K;AAAAA,QAAAA,K,CAAAA,K;AAAAA,QAAAA,K,CAAAA,K;AAAAA,QAAAA,K,CAAAA,K;SAAAA,K,qBAAAA,K","sourcesContent":["export enum SFXID {\n    ButtonClick,\n    CoinDrop,\n    CardFlip,\n    // Add more as needed\n}"]}

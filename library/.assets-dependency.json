@@ -1,0 +1,13 @@
+{
+  "path": {
+    "/Users/phuongduy/CardDeck/assets/resources/Cards/effect_nohu.plist": [
+      "/Users/phuongduy/CardDeck/assets/resources/Cards/effect_nohu.png"
+    ],
+    "/Users/phuongduy/CardDeck/assets/resources/Cards/card.plist": [
+      "/Users/phuongduy/CardDeck/assets/resources/Cards/card.png"
+    ],
+    "/Users/phuongduy/CardDeck/assets/resources/Chip_Coins/chip.plist": [
+      "/Users/phuongduy/CardDeck/assets/resources/Chip_Coins/chip.png"
+    ]
+  }
+}

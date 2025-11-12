@@ -1,0 +1,12 @@
+{
+  "options": {
+    "web-desktop": {
+      "configID": "e750f3",
+      "services": []
+    }
+  },
+  "builder-options": {
+    "configID": "e750f3",
+    "services": []
+  }
+}

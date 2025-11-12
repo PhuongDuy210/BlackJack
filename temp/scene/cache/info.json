@@ -1,0 +1,11 @@
+{
+    "systemInfo": {
+        "arch": "arm64",
+        "cpu": "Apple M4 Pro",
+        "version": "Darwin Kernel Version 24.3.0: Thu Jan  2 20:24:22 PST 2025; root:xnu-11215.81.4~3/RELEASE_ARM64_T6041"
+    },
+    "sceneListMap": {
+        "24a765bf-bb0a-4b6c-90df-05afa81ad20a": "/Users/phuongduy/CardDeck/assets/test.scene"
+    },
+    "deviceMd5": "23654e6834379da0c42ecc6256156f54"
+}
