@@ -1,0 +1,293 @@
+{
+  "ver": "1.0.7",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {
+    "d1ad0": {
+      "importer": "sprite-frame",
+      "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1@d1ad0",
+      "displayName": "",
+      "id": "d1ad0",
+      "name": "icon-chip-1",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 59,
+        "height": 58,
+        "rawWidth": 59,
+        "rawHeight": 58,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a",
+        "atlasUuid": "c58ae750-736f-4fe5-9800-a86e340119c1"
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b4c2": {
+      "importer": "sprite-frame",
+      "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1@4b4c2",
+      "displayName": "",
+      "id": "4b4c2",
+      "name": "icon-chip-2",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 58,
+        "width": 60,
+        "height": 59,
+        "rawWidth": 60,
+        "rawHeight": 59,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a",
+        "atlasUuid": "c58ae750-736f-4fe5-9800-a86e340119c1"
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f0f23": {
+      "importer": "sprite-frame",
+      "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1@f0f23",
+      "displayName": "",
+      "id": "f0f23",
+      "name": "icon-chip-3",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 117,
+        "width": 60,
+        "height": 59,
+        "rawWidth": 60,
+        "rawHeight": 59,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a",
+        "atlasUuid": "c58ae750-736f-4fe5-9800-a86e340119c1"
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e8000": {
+      "importer": "sprite-frame",
+      "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1@e8000",
+      "displayName": "",
+      "id": "e8000",
+      "name": "icon-chip-4",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 176,
+        "width": 60,
+        "height": 60,
+        "rawWidth": 60,
+        "rawHeight": 60,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a",
+        "atlasUuid": "c58ae750-736f-4fe5-9800-a86e340119c1"
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "26dea": {
+      "importer": "sprite-frame",
+      "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1@26dea",
+      "displayName": "",
+      "id": "26dea",
+      "name": "icon-chip-5",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 236,
+        "width": 54,
+        "height": 54,
+        "rawWidth": 54,
+        "rawHeight": 54,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a",
+        "atlasUuid": "c58ae750-736f-4fe5-9800-a86e340119c1"
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cd725": {
+      "importer": "sprite-frame",
+      "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1@cd725",
+      "displayName": "",
+      "id": "cd725",
+      "name": "icon-chip-6",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 290,
+        "width": 59,
+        "height": 58,
+        "rawWidth": 59,
+        "rawHeight": 58,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a",
+        "atlasUuid": "c58ae750-736f-4fe5-9800-a86e340119c1"
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "chip.png",
+    "format": 3,
+    "uuid": "c58ae750-736f-4fe5-9800-a86e340119c1",
+    "textureUuid": "bca83fb2-0692-4180-9710-6cdf08fa3645@6c48a"
+  }
+}
