@@ -5,7 +5,7 @@ A: 1 và 11
 
 	⁃	Player và Dealer chỉ có 2 lá. Dealer luôn có 1 lá úp cho tới khi mở bài (kết thúc game)
 	⁃	Nếu player hoặc dealer được blackjack (1 lá A và 1 lá có giá trị = 10) thì auto thắng trừ khi người còn lại cũng có blackjack
-	⁃	Player sau khi nhận được 2 lá ban đầu sẽ có 3 lựa chọn. 
+	⁃	Player sau khi nhận được 2 lá ban đầu sẽ có 4 lựa chọn. 
 	+ Hit: rút thêm 1 lá, sau khi rút không kết thúc lượt
 	+ Double: nhân đôi số cược, rút thêm 1 lá và kết thúc lượt
 	+ Stand: không rút và kết thúc lượt. Player có thể Stand bất cứ lúc nào, không có tổng giá trị bài tối thiểu cần đạt được
