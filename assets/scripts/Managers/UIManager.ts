@@ -1,30 +1,29 @@
-import { _decorator, Button, Component, Node, Prefab, instantiate, Vec3, Label, tween, UITransform, Vec2, Game } from 'cc';
+import { _decorator, Button, Component, Node, Sprite } from 'cc';
 import { EventManager } from './EventManager';
 import { GameEvent } from '../enums/GameEvent';
-import { Card } from '../Card';
 
-import { Participant } from '../Participant';
 import { Player } from '../Player';
-import { Dealer } from '../Dealer';
 
-import { ChipEntry } from '../Chip/ChipEntry';
-import { ChipButton } from '../Chip/ChipButton';
+import { GameState } from '../enums/GameState';
+import { GameStateEntry } from '../GameStateEntry';
 
 import { SFXID } from '../AudioSystem/SFXEnums';
 
-const { ccclass, property } = _decorator;
+import { GenericPopup } from '../Popup/GenericPopup';
+import { PopupButtonData } from '../Popup/PopupButtonData';
+import { PopupPage } from '../Popup/PopupPage';
 
-const MAX_STACK_COUNT = 5;
-const MAX_STACK_PER_TYPE = 4;
+import { AnimationType } from '../enums/AnimationType';
+
+const { ccclass, property } = _decorator;
 
 @ccclass('UIManager')
 export class UIManager extends Component {
+    @property(Sprite)
+    private stateSprite: Sprite = null!;
 
-    @property(Prefab)
-    private cardPrefab: Prefab = null!;
-
-    @property(Label)
-    private resultLabel: Label = null!;
+    @property({ type: GameStateEntry})
+    private gameStateEntries: GameStateEntry[] = []!;
 
     @property(Button)
     private dealButton: Button = null!;
@@ -44,59 +43,19 @@ export class UIManager extends Component {
     @property(Button)
     private splitButton: Button = null!;
 
-    @property(Node)
-    private deckPosition: Node = null!;
-
-    @property(Node)
-    private playerCardContainers: Node[] = []!;
-
-    @property(Label)
-    private playerScoreLabels: Label[] = []!;
-
-    @property(Node)
-    private handIndicators: Node[] = []!;
-
-    @property(Label)
-    private dealerScoreLabel: Label = null!;
-
-    @property(Node)
-    private dealerCardContainer: Node = null!;
-
-    @property(Button)
-    private potResetButton: Button = null!;
-
-    @property(Node)
-    private bettingArea: Node = null!;
-
-    @property(Node)
-    private potArea: Node = null!;
-
-    @property(Prefab)
-    private chipButtonPrefab: Prefab = null!;
-
-    @property(Label)
-    private totalBet: Label = null!;
-
-    private chipButtons: ChipButton[] = [];
-    private chipStacks: Map<number, number> = new Map(); // key: chip value, value: count
-    private chipStackPositions: Map<number, Vec2> = new Map(); // value ¨ position
-
-    private playerAnimationInProgress: number = 0;
-    private dealerAnimationInProgress: number = 0;
+    @property(GenericPopup)
+    private popup: GenericPopup = null!;
 
     private playerHandCount = 0;
 
     start() {
-        EventManager.instance.gameEvents.on(GameEvent.CHIP_ENTRY_READY, this.setupChipButtons, this);
-        EventManager.instance.gameEvents.on(GameEvent.ADD_CHIP_UI, this.addChip, this);
-        EventManager.instance.gameEvents.on(GameEvent.UPDATE_BET_VALUE, this.updateBetValue, this);
+        EventManager.instance.gameEvents.on(GameEvent.ADD_CHIP_UI, this.onChipAdd, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_STARTED, this.onGameStarted, this);
-        EventManager.instance.gameEvents.on(GameEvent.DEAL_CARD, this.addCardToParticipant, this);
-        EventManager.instance.gameEvents.on(GameEvent.SPLIT_HAND, this.animateSplitHand, this);
-        EventManager.instance.gameEvents.on(GameEvent.CHANGE_HAND, this.changeHand, this);
+        EventManager.instance.gameEvents.on(GameEvent.OFFER_INSURANCE, this.showInsurancePopup, this);
+        EventManager.instance.gameEvents.on(GameEvent.SPLIT_HAND, this.disableSplitButton, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_ENDED, this.displayResult, this);
+        EventManager.instance.gameEvents.on(GameEvent.GAMESTATE_CHANGED, this.displayGameState, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_RESET, this.resetUI, this);
-        EventManager.instance.gameEvents.on(GameEvent.DEALER_TURN_END, this.flipDealerCards, this);
         EventManager.instance.gameEvents.on(GameEvent.LOCK_INPUT, this.lockInput, this);
         EventManager.instance.gameEvents.on(GameEvent.UNLOCK_INPUT, this.unlockInput, this);
 
@@ -111,120 +70,36 @@ export class UIManager extends Component {
         this.hitButton.node.active = false;
         this.standButton.node.active = false;
         this.doubleButton.node.active = false;
-        this.resultLabel.node.active = false;
+        this.stateSprite.node.active = false;
         this.resetButton.node.active = false;
         this.splitButton.node.active = false;
-        this.playerScoreLabels.forEach(playerScoreLabel => {
-            playerScoreLabel.node.active = false;
-        });
-        this.dealerScoreLabel.node.active = false;
-
-        this.playerCardContainers.forEach(playerCardContainer => {
-            playerCardContainer.removeAllChildren();   
-        });
-        this.dealerCardContainer.removeAllChildren();
-
-        this.chipButtons.forEach(chipButton => {
-            chipButton.setInteractable(true);
-        });
-
-        this.handIndicators.forEach(handIndicator => {
-            handIndicator.active = false;
-        });
-        this.potArea.removeAllChildren();
-        this.resetPot();
         this.playerHandCount = 0;
     }
 
     protected onDestroy(): void {
-        EventManager.instance.gameEvents.off(GameEvent.CHIP_ENTRY_READY, this.setupChipButtons, this);
-        EventManager.instance.gameEvents.off(GameEvent.ADD_CHIP_UI, this.addChip, this);
-        EventManager.instance.gameEvents.off(GameEvent.UPDATE_BET_VALUE, this.updateBetValue, this);
+        EventManager.instance.gameEvents.off(GameEvent.ADD_CHIP_UI, this.onChipAdd, this);
+        EventManager.instance.gameEvents.off(GameEvent.SPLIT_HAND, this.disableSplitButton, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_STARTED, this.onGameStarted, this);
-        EventManager.instance.gameEvents.off(GameEvent.DEAL_CARD, this.addCardToParticipant, this);
+        EventManager.instance.gameEvents.off(GameEvent.OFFER_INSURANCE, this.showInsurancePopup, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_ENDED, this.displayResult, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_RESET, this.resetUI, this);
-        EventManager.instance.gameEvents.off(GameEvent.DEALER_TURN_END, this.flipDealerCards, this);
+        EventManager.instance.gameEvents.off(GameEvent.GAMESTATE_CHANGED, this.displayGameState, this);
+        EventManager.instance.gameEvents.off(GameEvent.LOCK_INPUT, this.lockInput, this);
+        EventManager.instance.gameEvents.off(GameEvent.UNLOCK_INPUT, this.unlockInput, this);
     }
 
-    private setupChipButtons(chipEntries: ChipEntry[]) {        
-        for (let i = 0; i < chipEntries.length; i++) {
-            const entry = chipEntries[i];
-            const chipNode = instantiate(this.chipButtonPrefab);
-            chipNode.setParent(this.bettingArea);
-            
-            const chipButton = chipNode.getComponent(ChipButton);
-            this.chipButtons.push(chipButton);
-            chipButton.setup(entry);
-            chipNode.setPosition(0, 0);
-        }
+    private onChipAdd() {
+        this.dealButton.interactable = true;
     }
 
-    private addChip(chipEntry: ChipEntry) {
-        const baseX = 0;
-        const baseY = 0;    
-        const offsetX = 60;
-        const offsetY = 10;
-
-        // Get current stack count and position
-        let stackPositionY = 0;
-        if (!this.chipStackPositions.has(chipEntry.value)) {
-            this.chipStacks.set(chipEntry.value, 0);
-            this.chipStackPositions.set(chipEntry.value, new Vec2(this.chipStackPositions.size, 0));
-        }
-        
-        let stackCount = this.chipStacks.get(chipEntry.value);
-        let stackPositionX = this.chipStackPositions.get(chipEntry.value).x;
-        stackPositionY = this.chipStackPositions.get(chipEntry.value).y + 1;
-        if (stackCount >= MAX_STACK_PER_TYPE * MAX_STACK_COUNT) {
-            console.log('Too many chips for one type, stop displaying new chip');
-            return;
-        }
-        if (stackCount % MAX_STACK_COUNT == 0) {
-            stackPositionY = stackPositionY - MAX_STACK_COUNT - 4;
-        }
-            
-        const chipNode = instantiate(this.chipButtonPrefab);
-        chipNode.setParent(this.potArea);
-        const chipButton = chipNode.getComponent(ChipButton);
-        chipButton.setup(chipEntry);
-        chipButton.setInteractable(false);
-        
-        chipNode.setPosition(baseX + stackPositionX * offsetX, baseY + stackPositionY * offsetY);
-        this.chipStacks.set(chipEntry.value, stackCount + 1);
-        this.chipStackPositions.set(chipEntry.value, new Vec2(stackPositionX, stackPositionY));
-
-        this.potResetButton.interactable = true;
-    }
-
-    private updateBetValue(betValue: number) {
-        this.totalBet.string = "Bet: $" + betValue;
-        if (betValue > 0) {
-            this.dealButton.interactable = true;
-        } else {
-            this.dealButton.interactable = false;
-            this.resetPot();
-        }
-    }
-
-    private resetPot() {
-        this.potArea.removeAllChildren();
-        this.chipStacks.clear();
-        this.chipStackPositions.clear();
-        this.potResetButton.interactable = false;
-
-        EventManager.instance.gameEvents.emit(GameEvent.PLAY_SFX, SFXID.Chip, this);
-    }
-
-    private onGameStarted(player: Player) {
+    private async onGameStarted(player: Player) {
         this.dealButton.node.active = false;
         this.hitButton.node.active = true;
         this.standButton.node.active = true;
         this.doubleButton.node.active = true;
         this.splitButton.node.active = true;
-        this.chipButtons.forEach(chipButton => {
-            chipButton.setInteractable(false);
-        });
+
+        // await AsyncUtils.
         if (player.canSplit()) {
             this.splitButton.interactable = true;
         } else {
@@ -236,161 +111,22 @@ export class UIManager extends Component {
         this.playerHandCount++;
     }
 
-    async addCardToParticipant(participant: Participant) {
-        this.potResetButton.interactable = false;
-
-        let handArea = null;
-        if (participant instanceof Player) {
-            const handIndex = participant.getIndex();
-            handArea = this.playerCardContainers[handIndex];
-        } else if (participant instanceof Dealer) {
-            handArea = this.dealerCardContainer;
-        }
-        
-        const hand = participant.getHand();
-        for (let i = handArea.children.length; i < hand.length; i++) {
-            await this.animateCardToHand(participant, handArea);
-        }
-        EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED, participant);
-    }
-
-    async animateCardToHand(participant: Participant, handArea: Node): Promise<void> {
-        EventManager.instance.gameEvents.emit(GameEvent.PLAY_SFX, SFXID.CardDeal);
-
-        const hand = participant.getHand();
-        const displayedCardCount = handArea.children.length;
-        if (displayedCardCount >= hand.length) {
-            return;
-        }
-        const latestCardData = hand[displayedCardCount];
-
-        // Get or create visual card node
-        const cardNode = instantiate(this.cardPrefab);
-        let card = cardNode.addComponent(Card);
-        card.init(latestCardData);
-        
-        // Add to scene
-        let scoreLabel;
-        if (participant instanceof Player) {
-            latestCardData.isFaceDown = false;
-            this.playerAnimationInProgress++;
-            const handIndex = participant.getIndex();
-            scoreLabel = this.playerScoreLabels[handIndex];
-        } else if (participant instanceof Dealer) {
-            latestCardData.isFaceDown = (displayedCardCount === 0 && !participant.revealAll);
-            this.dealerAnimationInProgress++;
-            scoreLabel = this.dealerScoreLabel;
-        }
-        handArea.addChild(cardNode);
-        
-        // Position at deck first
-        cardNode.setWorldPosition(this.deckPosition.getWorldPosition());
-        
-        // Animate to hand position
-        const targetPos = this.getCardTargetPosition(displayedCardCount);
-        await new Promise<void>((resolve) => {
-            tween(cardNode)
-            .to(0.5, { position: targetPos })
-            .call(async () => {
-                if (!latestCardData.isFaceDown) {
-                    if (participant instanceof Player) {
-                        console.log('Animating for Player');
-                    }
-                    await card.flipCard();
-                    if (participant instanceof Player) {
-                        console.log('Done animating for Player');
-                    }
-                    this.checkRemainingAnimation(participant);
-                    scoreLabel.string = 'Hand Value: ' + participant.getHandValue();
-                }
-            })
-            .call(resolve)
-            .start();
-        });
-    }
-    
-    async flipDealerCards() {
-        const dealerCardNodes = this.dealerCardContainer.children;
-        const cardNode = dealerCardNodes[0];
-        const card = cardNode.getComponent(Card);
-        if (card.isFaceDown) {
-            await card.flipCard();
-            this.checkRemainingAnimation(new Dealer);
-        }
-    }
-
-    async animateSplitHand() {
-        EventManager.instance.gameEvents.emit(GameEvent.PLAY_SFX, SFXID.CardDeal);
-        const originHandArea = this.playerCardContainers[0];
-        const targetHandArea = this.playerCardContainers[1];
-
-        const targetCard = originHandArea.children[1];
-        const worldPos = targetCard.worldPosition.clone();
-        targetCard.removeFromParent();
-        targetHandArea.addChild(targetCard);
-        targetCard.setWorldPosition(worldPos);
-
-        const targetPos = this.getCardTargetPosition(0);
-            await new Promise<void>((resolve) => {
-                tween(targetCard)
-                .to(0.5, { position: targetPos })
-                .call(resolve)
-                .start();
-        });
-        this.splitButton.interactable = false;
-        this.handIndicators[0].active = true;
-        this.playerHandCount++;
-    }
-
-    private changeHand(handIndex: number) {
-        if (this.playerHandCount == 1) return;
-        this.handIndicators.forEach(handIndicator => {
-            handIndicator.active = false;
-        });
-        this.handIndicators[handIndex].active = true;
-    }
-    
-    private checkRemainingAnimation(participant: Participant) {
-        if (participant instanceof Player) {
-            this.playerAnimationInProgress--;
-        } else if (participant instanceof Dealer) {
-            this.dealerAnimationInProgress--;
-        }
-        console.log('Player animations left:', this.playerAnimationInProgress, 'Dealer animations left:', this.dealerAnimationInProgress);
-        if ((this.playerAnimationInProgress <= 0 && participant instanceof Player) ||
-            (this.dealerAnimationInProgress <= 0 && participant instanceof Dealer)) {
-            console.log('All animations finished.');
-            EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED, participant);
-        }
-    }
-
-    private getCardTargetPosition(cardIndex: number): Vec3 {
-        const xOffset = 50;
-        const yOffset = -40;
-        const x = (cardIndex % 13) * xOffset;
-        const y = Math.floor(cardIndex / 13) * yOffset;
-        return new Vec3(x, y, 0);
-    }
-
-    private displayResult(result: string) {
-        // Implement result display logic (e.g., show a popup or update a label)
-        console.log('Game Result:', result);
-        this.resultLabel.node.active = true;
-        this.resultLabel.string = result;
+    private displayResult() {
         this.hitButton.node.active = false;
         this.standButton.node.active = false;
         this.resetButton.node.active = true;
         this.doubleButton.node.active = false;
         this.splitButton.node.active = false;
+    }
 
-        for (let i = 0; i < this.playerHandCount; i++) {
-            this.playerScoreLabels[i].node.active = true;
+    private displayGameState(state: GameState) {
+        const entry = this.gameStateEntries.find(e => e.gameState === state);
+        if (entry) {
+            this.stateSprite.node.active = true;
+            this.stateSprite.spriteFrame = entry.spriteFrame;
+        } else {
+            this.stateSprite.node.active = false;
         }
-        
-        this.handIndicators.forEach(handIndicator => {
-            handIndicator.active = false;
-        });
-        this.dealerScoreLabel.node.active = true;
     }
 
     private attachPlaySFXToButton(root: Node) {
@@ -402,6 +138,22 @@ export class UIManager extends Component {
 
     private playButtonSFX() {
         EventManager.instance.gameEvents.emit(GameEvent.PLAY_SFX, SFXID.ButtonClick);
+    }
+
+    public disableSplitButton() {
+        // Only for disabling the splitButton after clicking it once
+        this.splitButton.interactable = false;
+    }
+
+    private showInsurancePopup() {
+        let insurancePopupBtns = [];
+        insurancePopupBtns.push(new PopupButtonData('Yes', this.useInsurance));
+        insurancePopupBtns.push(new PopupButtonData('No'));
+        this.popup.show('Insurance', 'Do you want to use Insurance?', insurancePopupBtns);
+    }
+
+    private useInsurance() {
+        //Emit insurance event here
     }
 
     private lockInput() {
@@ -419,6 +171,20 @@ export class UIManager extends Component {
         this.standButton.interactable = true;
         this.doubleButton.interactable = true;
         this.resetButton.interactable = true;
+    }
+
+    public displayRule() {
+        let rulePopupBtns = [];
+        rulePopupBtns.push(new PopupButtonData('Close'));
+
+        let popupPages = [];
+        popupPages.push(new PopupPage(0, 'Popup Page 1 Testing testing testing testing.  testinv v v.  testintestingvtesting'));
+        popupPages.push(new PopupPage(1, 'Popup Page 2 testing testing testing testing testing testing'));
+        popupPages.push(new PopupPage(2, 'Popup Page 3.  testintesting. testing testing testing.  testintesting testing testing testing \n testing v testing testing testing'));
+        // Fade for the popup mask, FlyTop for the popup
+        let entryAnims = [AnimationType.Fade, AnimationType.FlyTop];
+        let exitAnims = [AnimationType.Fade, AnimationType.FlyTop];
+        this.popup.show('Rules', popupPages, rulePopupBtns, entryAnims, exitAnims);
     }
 }
 

@@ -5,6 +5,7 @@ import { EventManager } from './EventManager';
 import { GameEvent } from '../enums/GameEvent';
 
 import { SFXID } from '../AudioSystem/SFXEnums';
+import { BetUIManager } from './BetUIManager';
 
 @ccclass('BetManager')
 export class BetManager extends Component {
@@ -16,11 +17,12 @@ export class BetManager extends Component {
 
     private selectedChips: ChipEntry[] = [];
     private currentBet: number = 0;
+    private previousBet: ChipEntry[] = [];
 
     start() {
         EventManager.instance.gameEvents.on(GameEvent.CHIP_SELECTED, this.addChip, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_RESET, this.clearBet, this);
-        EventManager.instance.gameEvents.emit(GameEvent.CHIP_ENTRY_READY, this.chips, this);
+        EventManager.instance.gameEvents.emit(GameEvent.CHIP_ENTRY_READY, this.chips, this.maxBet, this);
     }
 
     onDestroy() {
@@ -43,9 +45,18 @@ export class BetManager extends Component {
     }
 
     public clearBet() {
+        this.previousBet = this.getSelectedChips();
         this.selectedChips = [];
         this.currentBet = 0;
         EventManager.instance.gameEvents.emit(GameEvent.UPDATE_BET_VALUE, this.currentBet, this);
+    }
+
+    public reBet() {
+        if (this.previousBet.length > 0) {
+            this.previousBet.forEach(chip => {
+                this.addChip(chip);
+            });
+        }
     }
 
     public getTotalBet(): number {

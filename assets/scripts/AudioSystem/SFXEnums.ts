@@ -4,6 +4,8 @@ export enum SFXID {
     CardDeal,
     CardFlip,
     Chip,
+    Win,
+    Lose
     // Add more as needed
 }
 

@@ -1,7 +1,8 @@
-export enum PopupAnimationType {
+export enum AnimationType {
     FlyTop,
     FlyBottom,
     FlyLeft,
     FlyRight,
-    Scale
+    Scale,
+    Fade,
 }

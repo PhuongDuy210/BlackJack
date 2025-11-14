@@ -6,4 +6,7 @@ export enum GameState {
     DealerTurn,
     DealerTurnEnd,
     GameEnd,
+    Win,
+    Lose,
+    Draw,
 }
