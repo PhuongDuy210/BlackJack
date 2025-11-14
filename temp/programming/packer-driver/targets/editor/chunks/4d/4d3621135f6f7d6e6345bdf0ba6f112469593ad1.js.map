@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///Users/phuongduy/CardDeck/assets/scripts/AudioSystem/BGMID.ts"],"names":["BGMID"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,K;AAAAA,QAAAA,K,CAAAA,K;AAAAA,QAAAA,K,CAAAA,K;AAAAA,QAAAA,K,CAAAA,K;AAAAA,QAAAA,K,CAAAA,K;SAAAA,K,qBAAAA,K","sourcesContent":["export enum BGMID {\n    MainMenu,\n    Gameplay,\n    Victory,\n    Defeat,\n}"]}

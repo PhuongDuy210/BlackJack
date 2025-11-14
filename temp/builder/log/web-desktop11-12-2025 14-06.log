@@ -1,1069 +1,0 @@
-11-12-2025 14:06:16-debug: =================================== Build Task (web-desktop) Start ================================
-11-12-2025 14:06:17-debug: // ---- build task cocos-service：onBeforeBuild ----
-11-12-2025 14:06:17-debug: Process: heapTotal 204.02MB heapUsed 187.22MB rss 248.13MB
-11-12-2025 14:06:16-debug: Build with Cocos Creator 3.6.3
-11-12-2025 14:06:16-debug: Start build task, options:{"name":"CardDeck","platform":"web-desktop","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":false,"sourceMaps":false,"polyfills":{"asyncFunctions":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"merge_dep","replaceSplashScreen":false,"startScene":"24a765bf-bb0a-4b6c-90df-05afa81ad20a","outputName":"web-desktop","scenes":[{"url":"db://assets/test.scene","uuid":"24a765bf-bb0a-4b6c-90df-05afa81ad20a","inBundle":false}],"web-desktop":[],"packages":{"web-desktop":{"useWebGPU":false,"resolution":{"designWidth":1280,"designHeight":720},"__version__":"1.0.1"},"cocos-service":{"configID":"e750f3","services":[]}},"__version__":"1.3.3"}
-11-12-2025 14:06:17-debug: cocos-service:(onBeforeBuild) start...0%
-11-12-2025 14:06:19-debug: // ---- build task cocos-service：onBeforeBuild ---- (2809ms)
-11-12-2025 14:06:19-debug: cocos-service:(onBeforeBuild) in 2809 ms2%
-11-12-2025 14:06:19-debug: Query all assets info in project
-11-12-2025 14:06:19-debug: init custom config: keepNodeUuid: false, useCache: true
-11-12-2025 14:06:19-debug: BuildAssetLibrary query-assets with assets 585
-11-12-2025 14:06:19-debug:   Number of other assets: 1676
-11-12-2025 14:06:19-debug: web-desktop:(onAfterInit) start...2%
-11-12-2025 14:06:19-debug: // ---- build task web-desktop：onAfterInit ----
-11-12-2025 14:06:19-debug: Process: heapTotal 212.73MB heapUsed 187.67MB rss 250.08MB
-11-12-2025 14:06:19-debug:   Number of all scenes: 1
-11-12-2025 14:06:19-debug:   Number of all scripts: 29
-11-12-2025 14:06:19-debug: BuildAssetLibrary initialized with asset 1201!
-11-12-2025 14:06:19-debug: web-desktop:(onAfterInit) in 0 ms3%
-11-12-2025 14:06:19-debug: // ---- build task cocos-service：onAfterInit ----
-11-12-2025 14:06:19-debug: Process: heapTotal 212.73MB heapUsed 187.70MB rss 250.09MB
-11-12-2025 14:06:19-debug: cocos-service:(onAfterInit) start...3%
-11-12-2025 14:06:20-debug: // ---- build task cocos-service：onAfterInit ---- (189ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.73MB heapUsed 187.74MB rss 250.09MB
-11-12-2025 14:06:20-debug: localization-editor:(onAfterInit) start...4%
-11-12-2025 14:06:20-debug: // ---- build task localization-editor：onAfterInit ----
-11-12-2025 14:06:20-debug: cocos-service:(onAfterInit) in 189 ms4%
-11-12-2025 14:06:20-debug: // ---- build task localization-editor：onAfterInit ---- (3ms)
-11-12-2025 14:06:20-debug: Reload project scripts start4%
-11-12-2025 14:06:20-debug: // ---- build task Reload project scripts ----
-11-12-2025 14:06:20-debug: reload all scripts.
-11-12-2025 14:06:20-debug: localization-editor:(onAfterInit) in 3 ms4%
-11-12-2025 14:06:20-debug: Process: heapTotal 212.73MB heapUsed 187.77MB rss 250.09MB
-11-12-2025 14:06:20-debug: Incremental keys: 
-11-12-2025 14:06:20-debug: Set detail map pack:///resolution-detail-map.json: {}
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
-11-12-2025 14:06:20-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register BGMEntry
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Register BGMManager
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register SFXEntry
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register SFXManager
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register EventManager
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register Card
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Register ChipButton
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register ChipEntry
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register Poolable
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register ObjectPool
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Register BetManager
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register DeckManager
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Register GameManager
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/67/67cc66ce12d7ea0a2546e0e0398cdd9fb748fa25.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/67/67cc66ce12d7ea0a2546e0e0398cdd9fb748fa25.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Register UIManager
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/67/67cc66ce12d7ea0a2546e0e0398cdd9fb748fa25.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js is not in module cache!
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Register GenericPopup
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js" loaded.
-11-12-2025 14:06:20-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/35/35492020a971386939e6895c15540718f2e28974.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/35/35492020a971386939e6895c15540718f2e28974.js is not in module cache!
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/35/35492020a971386939e6895c15540718f2e28974.js" loaded.
-11-12-2025 14:06:20-debug: [[Executor]] Module "pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js" loaded.
-11-12-2025 14:06:20-debug: // ---- build task Reload project scripts ---- (40ms)
-11-12-2025 14:06:20-debug: // ---- build task Query asset bundle ----
-11-12-2025 14:06:20-debug: Query asset bundle start6%
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 187.44MB rss 254.58MB
-11-12-2025 14:06:20-debug: run build task Reload project scripts success in 40 ms √6%
-11-12-2025 14:06:20-debug: // ---- build task Query asset bundle ---- (5ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 187.48MB rss 254.59MB
-11-12-2025 14:06:20-debug: Query and organize assets start7%
-11-12-2025 14:06:20-debug: // ---- build task Query and organize assets ----
-11-12-2025 14:06:20-debug: run build task Query asset bundle success in 5 ms √7%
-11-12-2025 14:06:20-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,871c3b6c-7379-419d-bda3-794b239ab90d
-11-12-2025 14:06:20-debug: Number of scenes: 1
-11-12-2025 14:06:20-debug: Number of assets: 800
-11-12-2025 14:06:20-debug: Number of asset bundle: 3
-11-12-2025 14:06:20-debug: // ---- build task Query and organize assets ---- (94ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.16MB heapUsed 192.78MB rss 261.25MB
-11-12-2025 14:06:20-debug: sort script group...
-11-12-2025 14:06:20-debug: // ---- build task Organize scripts ----
-11-12-2025 14:06:20-debug: run build task Query and organize assets success in 94 ms √8%
-11-12-2025 14:06:20-debug: Organize scripts start8%
-11-12-2025 14:06:20-debug: run build task Organize scripts success in 0 ms √9%
-11-12-2025 14:06:20-debug: Organize texture compression tasks start9%
-11-12-2025 14:06:20-debug: // ---- build task Organize texture compression tasks ----
-11-12-2025 14:06:20-debug: Process: heapTotal 212.16MB heapUsed 192.82MB rss 261.25MB
-11-12-2025 14:06:20-debug: Number of image-compress task: 0
-11-12-2025 14:06:20-debug: // ---- build task Organize texture compression tasks ---- (53ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.16MB heapUsed 194.70MB rss 263.11MB
-11-12-2025 14:06:20-debug: Number of json group: 235
-11-12-2025 14:06:20-debug: Group json start11%
-11-12-2025 14:06:20-debug: run build task Organize texture compression tasks success in 53 ms √11%
-11-12-2025 14:06:20-debug: // ---- build task Group json ----
-11-12-2025 14:06:20-debug: // ---- build task Group json ---- (2ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.15MB rss 264.27MB
-11-12-2025 14:06:20-debug: run build task Group json success in 2 ms √12%
-11-12-2025 14:06:20-debug: // ---- build task Merging Texture2D json ----
-11-12-2025 14:06:20-debug: Merging Texture2D json start12%
-11-12-2025 14:06:20-debug: // ---- build task Merging Texture2D json ---- (5ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.77MB rss 265.69MB
-11-12-2025 14:06:20-debug: Sort import-map.json start13%
-11-12-2025 14:06:20-debug: // ---- build task Sort import-map.json ----
-11-12-2025 14:06:20-debug: run build task Merging Texture2D json success in 5 ms √13%
-11-12-2025 14:06:20-debug: run build task Sort import-map.json success in 0 ms √14%
-11-12-2025 14:06:20-debug: // ---- build task web-desktop：onBeforeBuildAssets ----
-11-12-2025 14:06:20-debug: web-desktop:(onBeforeBuildAssets) start...14%
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.81MB rss 265.69MB
-11-12-2025 14:06:20-debug: web-desktop:(onBeforeBuildAssets) in 0 ms16%
-11-12-2025 14:06:20-debug: localization-editor:(onBeforeBuildAssets) start...16%
-11-12-2025 14:06:20-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.86MB rss 265.70MB
-11-12-2025 14:06:20-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (1ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.88MB rss 265.72MB
-11-12-2025 14:06:20-debug: Start collect pack info
-11-12-2025 14:06:20-debug: // ---- build task Build auto-atlas ----
-11-12-2025 14:06:20-debug: localization-editor:(onBeforeBuildAssets) in 1 ms17%
-11-12-2025 14:06:20-debug: Build auto-atlas start17%
-11-12-2025 14:06:20-debug: // ---- build task Build auto-atlas ---- (1ms)
-11-12-2025 14:06:20-debug: // ---- build task Compress Image ----
-11-12-2025 14:06:20-debug: Compress Image start23%
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.94MB rss 265.73MB
-11-12-2025 14:06:20-debug: run build task Build auto-atlas success in 1 ms √23%
-11-12-2025 14:06:20-debug: // ---- build task Compress Image ---- (1ms)
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 189.97MB rss 265.75MB
-11-12-2025 14:06:20-debug: Asset Bundle(internal) handle assets: 20
-11-12-2025 14:06:20-debug: // ---- build task Copy the resource ----
-11-12-2025 14:06:20-debug: run build task Compress Image success in 1 ms √30%
-11-12-2025 14:06:20-debug: Copy the resource start30%
-11-12-2025 14:06:20-debug: Asset Bundle(resources) handle assets: 766
-11-12-2025 14:06:20-debug: Asset Bundle(main) handle assets: 35
-11-12-2025 14:06:20-debug: // ---- build task Copy the resource ---- (53ms)
-11-12-2025 14:06:20-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
-11-12-2025 14:06:20-debug: Build the grouped json and scatter files to the specified location start37%
-11-12-2025 14:06:20-debug: Process: heapTotal 212.02MB heapUsed 194.28MB rss 265.89MB
-11-12-2025 14:06:20-debug: run build task Copy the resource success in 53 ms √37%
-11-12-2025 14:06:20-debug: Json group(0846c28f0) compile success，json number: 6
-11-12-2025 14:06:20-debug: Json group(06961ca0a) compile success，json number: 6
-11-12-2025 14:06:20-debug: Json group(0120d75ae) compile success，json number: 6
-11-12-2025 14:06:20-debug: Json group(0ea339de8) compile success，json number: 6
-11-12-2025 14:06:20-debug: Json group(0a7642b6d) compile success，json number: 6
-11-12-2025 14:06:20-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (286ms)
-11-12-2025 14:06:20-debug: run build task Build the grouped json and scatter files to the specified location success in 286 ms √43%
-11-12-2025 14:06:20-debug: Build script start43%
-11-12-2025 14:06:20-debug: // ---- build task Build script ----
-11-12-2025 14:06:20-debug: Process: heapTotal 212.77MB heapUsed 190.98MB rss 269.86MB
-11-12-2025 14:06:23-debug: Build project script start...43%
-11-12-2025 14:06:23-debug: Process: heapTotal 232.45MB heapUsed 198.47MB rss 279.45MB
-11-12-2025 14:06:23-log: Run build task(build-script) in child, see: chrome://inspect/#devices
-11-12-2025 14:06:23-log: [build-script]enter sub process 23696, /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Frameworks/CocosCreator Helper (Renderer).app/Contents/MacOS/CocosCreator Helper (Renderer),/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/static/sub-process-index
-11-12-2025 14:06:26-debug: excute-script over with build-script 3215ms
-11-12-2025 14:06:26-debug: Copy externalScripts success!
-11-12-2025 14:06:26-debug: Build project script in (3304 ms) √43%
-11-12-2025 14:06:26-debug: Build engine start...43%
-11-12-2025 14:06:26-debug: Process: heapTotal 232.45MB heapUsed 198.71MB rss 130.97MB
-11-12-2025 14:06:26-debug: Engine cache ({link(/var/folders/l6/84q609z97b9f3707xlssvg0c0000gn/T/CocosCreator/3.6.3/builder/engine/7864e746d6ce7ae2a13755cb0c6aa264)}) does not exist.
-11-12-2025 14:06:26-log: Run build task(build-engine) in child, see: chrome://inspect/#devices
-11-12-2025 14:06:27-log: [build-engine]enter sub process 23715, /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Frameworks/CocosCreator Helper (Renderer).app/Contents/MacOS/CocosCreator Helper (Renderer),/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/static/sub-process-index
-11-12-2025 14:06:28-log: [build-engine]Build-engine options: {  "engine": "/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine",  "platform": "HTML5",  "moduleFormat": 2,  "compress": true,  "split": false,  "ammoJsWasm": "fallback",  "assetURLFormat": "runtime-resolved",  "noDeprecatedFeatures": false,  "engineName": "cocos-js",  "sourceMaps": false,  "features": [    "2d",    "animation",    "audio",    "base",    "dragon-bones",    "gfx-webgl",    "gfx-webgl2",    "intersection-2d",    "particle-2d",    "physics-2d-box2d",    "profiler",    "spine",    "tiled-map",    "tween",    "ui",    "video",    "webview"  ],  "loose": true,  "mode": "BUILD",  "flags": {    "DEBUG": false,    "UI_GPU_DRIVEN": false  },  "name": "cocos-js",  "incremental": "/var/folders/l6/84q609z97b9f3707xlssvg0c0000gn/T/CocosCreator/3.6.3/builder/engine/7864e746d6ce7ae2a13755cb0c6aa264.watch-files.json",  "out": "/var/folders/l6/84q609z97b9f3707xlssvg0c0000gn/T/CocosCreator/3.6.3/builder/engine/7864e746d6ce7ae2a13755cb0c6aa264",  "buildTimeConstants": {    "HTML5": true,    "NATIVE": false,    "WECHAT": false,    "BAIDU": false,    "XIAOMI": false,    "ALIPAY": false,    "TAOBAO": false,    "BYTEDANCE": false,    "OPPO": false,    "VIVO": false,    "HUAWEI": false,    "COCOSPLAY": false,    "QTT": false,    "LINKSURE": false,    "EDITOR": false,    "PREVIEW": false,    "BUILD": true,    "TEST": false,    "DEBUG": false,    "SERVER_MODE": false,    "DEV": false,    "MINIGAME": false,    "RUNTIME_BASED": false,    "SUPPORT_JIT": true,    "JSB": false,    "NOT_PACK_PHYSX_LIBS": false,    "NET_MODE": 0,    "WEBGPU": false  },  "metaFile": "/var/folders/l6/84q609z97b9f3707xlssvg0c0000gn/T/CocosCreator/3.6.3/builder/engine/7864e746d6ce7ae2a13755cb0c6aa264.meta/meta.json"}
-11-12-2025 14:06:28-log: [build-engine]Module source "internal-constants":function tryDefineGlobal (name, value) {    const _global = typeof window === 'undefined' ? global : window;    if (typeof _global[name] === 'undefined') {        return (_global[name] = value);    } else {        // eslint-disable-next-line @typescript-eslint/no-unsafe-return        return _global[name];    }}export const HTML5 = true;export const NATIVE = false;export const WECHAT = false;tryDefineGlobal('CC_WECHAT', false);export const BAIDU = false;tryDefineGlobal('CC_BAIDU', false);export const XIAOMI = false;tryDefineGlobal('CC_XIAOMI', false);export const ALIPAY = false;tryDefineGlobal('CC_ALIPAY', false);export const TAOBAO = false;export const BYTEDANCE = false;tryDefineGlobal('CC_BYTEDANCE', false);export const OPPO = false;tryDefineGlobal('CC_OPPO', false);export const VIVO = false;tryDefineGlobal('CC_VIVO', false);export const HUAWEI = false;tryDefineGlobal('CC_HUAWEI', false);export const COCOSPLAY = false;tryDefineGlobal('CC_COCOSPLAY', false);export const QTT = false;tryDefineGlobal('CC_QTT', false);export const LINKSURE = false;tryDefineGlobal('CC_LINKSURE', false);export const EDITOR = false;tryDefineGlobal('CC_EDITOR', false);export const PREVIEW = false;tryDefineGlobal('CC_PREVIEW', false);export const BUILD = true;tryDefineGlobal('CC_BUILD', true);export const TEST = false;tryDefineGlobal('CC_TEST', false);export const DEBUG = false;tryDefineGlobal('CC_DEBUG', false);export const SERVER_MODE = false;export const DEV = false;tryDefineGlobal('CC_DEV', false);export const MINIGAME = false;tryDefineGlobal('CC_MINIGAME', false);export const RUNTIME_BASED = false;tryDefineGlobal('CC_RUNTIME_BASED', false);export const SUPPORT_JIT = true;tryDefineGlobal('CC_SUPPORT_JIT', true);export const JSB = false;tryDefineGlobal('CC_JSB', false);export const NOT_PACK_PHYSX_LIBS = false;export const NET_MODE = 0;export const WEBGPU = false;
-11-12-2025 14:06:28-log: [build-engine]Module source "cc":export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/2d.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/animation.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/audio.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/base.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/dragon-bones.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/gfx-webgl.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/gfx-webgl2.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/intersection-2d.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/particle-2d.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-2d-box2d.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-2d-framework.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/profiler.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/spine.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/tiled-map.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/tween.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/ui.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/video.ts';export * from '/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/webview.ts';
-11-12-2025 14:06:28-log: [build-engine]Redirect module internal:native to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/native-binding/impl.ts
-11-12-2025 14:06:28-log: [build-engine]Redirect module pal/system-info to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/system-info/web/system-info.ts
-11-12-2025 14:06:29-log: [build-engine]Redirect module pal/env to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/env/web/env.ts
-11-12-2025 14:06:29-log: [build-engine]Redirect module pal/pacer to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/pacer/pacer-web.ts
-11-12-2025 14:06:29-log: [build-engine]Redirect module pal/input to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/input/web/index.ts
-11-12-2025 14:06:30-log: [build-engine]Redirect module pal/screen-adapter to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/screen-adapter/web/screen-adapter.ts
-11-12-2025 14:06:30-log: [build-engine]Redirect module pal/audio to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/audio/web/player.ts
-11-12-2025 14:06:30-log: [build-engine]Redirect module pal/minigame to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/minigame/non-minigame.ts
-11-12-2025 14:06:31-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/spine/lib/spine-core.js
-11-12-2025 14:06:31-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/spine/lib/spine-core.js
-11-12-2025 14:06:34-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/node_modules/@cocos/dragonbones-js/out/dragonBones.js
-11-12-2025 14:06:34-log: [build-engine]Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/node_modules/@cocos/dragonbones-js/out/dragonBones.js
-11-12-2025 14:06:34-log: [build-engine]Redirect module /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/2d/renderer/native-2d.ts to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/2d/renderer/native-2d-empty.ts
-11-12-2025 14:06:36-log: [build-engine]Redirect module /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/core/animation/marionette/runtime-exports.ts to /Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/core/animation/marionette/index-empty.ts
-11-12-2025 14:06:43-log: [build-engine]==== Performance ===={"# BUILD":[15100.613333,280060644,376314572],"## generate module graph":[14484.255375,259686044,355943072],"- plugin 0 (@cocos/build-engine|external-asset) - resolveId":[184.59571299999976,930752,726486136],"- plugin 0 (@cocos/build-engine|external-asset) - resolveId (async)":[891.0586590000015,3223772,726486524],"- plugin 1 (@cocos/build-engine|code-asset) - resolveId":[187.25988799999968,290348,726487308],"- plugin 2 (@cocos/build-engine|load-asset) - resolveId":[185.95878299999947,858940,726488544],"- plugin 2 (@cocos/build-engine|load-asset) - resolveId (async)":[941.7570410000039,3216704,726488932],"- plugin 3 (@cocos/build-engine|module-overrides) - resolveId":[184.32731699999977,600316,726489716],"- plugin 4 (virtual) - resolveId":[187.8991210000002,5313048,726492296],"load modules":[95660.59433899999,4225644224,727825372],"- plugin 0 (@cocos/build-engine|external-asset) - load":[35.45399800000001,167136,727523924],"- plugin 0 (@cocos/build-engine|external-asset) - load (async)":[35.17954199999999,162220,727524208],"- plugin 1 (@cocos/build-engine|code-asset) - load":[36.478382999999994,245376,727524864],"- plugin 1 (@cocos/build-engine|code-asset) - load (async)":[35.479834999999994,158732,727525148],"- plugin 2 (@cocos/build-engine|load-asset) - load":[34.93019799999999,172928,727525704],"- plugin 2 (@cocos/build-engine|load-asset) - load (async)":[35.071918,158764,727525988],"- plugin 3 (@cocos/build-engine|module-overrides) - load":[35.983914000000006,62972,727526380],"- plugin 4 (virtual) - load":[34.92534899999998,53876,727526772],"- plugin 7 (json) - transform":[38.703379000000034,620728,727830644],"- plugin 8 (commonjs) - transform":[254.20584699999995,20892320,727833748],"- plugin 9 (babel) - transform":[122.19624900000001,11938148,727866368],"generate ast":[431.84761500000025,34325880,725964712],"analyse ast":[451.1054330000001,51193704,726478560],"- plugin 5 (ts-paths) - resolveId":[173.1127880000001,259848,726492688],"- plugin 6 (node-resolve) - resolveId":[180.61059599999976,9309072,726496136],"- plugin 6 (node-resolve) - resolveId (async)":[108939.58486700014,-22717839952,727766560],"- plugin 6 (node-resolve) - load":[34.69605499999998,53244,727527204],"- plugin 8 (commonjs) - load":[35.712289999999996,88164,727527684],"- plugin 9 (babel) - load":[133.8834109999999,4686816,727528076],"- plugin 9 (babel) - transform (async)":[8299.297672999994,857282592,725623356],"- plugin 8 (commonjs) - resolveId":[21.135049000000002,39116,726042808],"- plugin 9 (babel) - resolveId":[19.798440000000014,24136,726043224],"- plugin 8 (commonjs) - resolveId (async)":[2298.975208,111140440,723900784],"- plugin 8 (commonjs) - load (async)":[505.341,30428840,601952576],"## sort modules":[136.9145,12749708,368693192],"## mark included statements":[479.051625,7619888,376313432],"treeshaking pass 1":[164.175292,922360,372309676],"treeshaking pass 2":[99.16575,6846760,379156780],"treeshaking pass 3":[54.1135,27048,379184172],"treeshaking pass 4":[37.540333,1744300,380928816],"treeshaking pass 5":[28.483625,-1286436,379642748],"treeshaking pass 6":[26.272208,-3472264,376170828],"treeshaking pass 7":[25.094125,4155360,380326532],"treeshaking pass 8":[38.969042,-4015344,376313096]}
-11-12-2025 14:06:43-log: [build-engine]====             ====
-11-12-2025 14:06:52-debug: excute-script over with build-engine 25561ms
-11-12-2025 14:06:52-debug: Build engine in (25680 ms) √43%
-11-12-2025 14:06:52-debug: // ---- build task Build script ---- (31538ms)
-11-12-2025 14:06:52-debug: // ---- build task Compress zip bundle ----
-11-12-2025 14:06:52-debug: run build task Build script success in 31538 ms √50%
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.63MB rss 249.98MB
-11-12-2025 14:06:52-debug: Compress zip bundle start50%
-11-12-2025 14:06:52-debug: // ---- build task Compress zip bundle ---- (1ms)
-11-12-2025 14:06:52-debug: run build task Compress zip bundle success in 1 ms √57%
-11-12-2025 14:06:52-debug: Add md5 suffix to assets start57%
-11-12-2025 14:06:52-debug: // ---- build task Add md5 suffix to assets ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.68MB rss 250.13MB
-11-12-2025 14:06:52-debug: run build task Add md5 suffix to assets success in 0 ms √67%
-11-12-2025 14:06:52-debug: // ---- build task Init settings and config ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.71MB rss 250.14MB
-11-12-2025 14:06:52-debug: Init settings and config start67%
-11-12-2025 14:06:52-debug: // ---- build task Init settings and config ---- (1ms)
-11-12-2025 14:06:52-debug: // ---- build task builder.tasks.settings.macro ----
-11-12-2025 14:06:52-debug: run build task Init settings and config success in 1 ms √67%
-11-12-2025 14:06:52-debug: builder.tasks.settings.macro start67%
-11-12-2025 14:06:52-debug: builder.tasks.settings.macro does not defined in i18n
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.75MB rss 250.44MB
-11-12-2025 14:06:52-debug: // ---- build task builder.tasks.settings.macro ---- (2ms)
-11-12-2025 14:06:52-debug: run build task builder.tasks.settings.macro success in 2 ms √68%
-11-12-2025 14:06:52-debug: Sort some build options to settings.json start68%
-11-12-2025 14:06:52-debug: // ---- build task Sort some build options to settings.json ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.78MB rss 250.47MB
-11-12-2025 14:06:52-debug: // ---- build task Sort some build options to settings.json ---- (2ms)
-11-12-2025 14:06:52-debug: run build task Sort some build options to settings.json success in 2 ms √68%
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.84MB rss 250.56MB
-11-12-2025 14:06:52-debug: // ---- build task custom joint texture layouts ----
-11-12-2025 14:06:52-debug: custom joint texture layouts start68%
-11-12-2025 14:06:52-debug: // ---- build task custom joint texture layouts ---- (1ms)
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.87MB rss 250.59MB
-11-12-2025 14:06:52-debug: custom joint physics start69%
-11-12-2025 14:06:52-debug: // ---- build task custom joint physics ----
-11-12-2025 14:06:52-debug: run build task custom joint texture layouts success in 1 ms √69%
-11-12-2025 14:06:52-debug: run build task custom joint physics success in 0 ms √69%
-11-12-2025 14:06:52-debug: Fill script data to settings start69%
-11-12-2025 14:06:52-debug: // ---- build task Fill script data to settings ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.89MB rss 250.63MB
-11-12-2025 14:06:52-debug: // ---- build task Fill script data to settings ---- (1ms)
-11-12-2025 14:06:52-debug: Fill scene data to settings start70%
-11-12-2025 14:06:52-debug: // ---- build task Fill scene data to settings ----
-11-12-2025 14:06:52-debug: run build task Fill script data to settings success in 1 ms √70%
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.92MB rss 250.64MB
-11-12-2025 14:06:52-debug: run build task Fill scene data to settings success in 0 ms √71%
-11-12-2025 14:06:52-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
-11-12-2025 14:06:52-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.94MB rss 250.67MB
-11-12-2025 14:06:52-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
-11-12-2025 14:06:52-debug: Generate md5AssetsMap from suffixMap to settings start71%
-11-12-2025 14:06:52-debug: options.md5Cache is false.
-11-12-2025 14:06:52-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-11-12-2025 14:06:52-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √71%
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 192.37MB rss 251.13MB
-11-12-2025 14:06:52-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 0 ms √72%
-11-12-2025 14:06:52-debug: // ---- build task web-desktop：onBeforeCompressSettings ----
-11-12-2025 14:06:52-debug: web-desktop:(onBeforeCompressSettings) start...72%
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 192.42MB rss 251.16MB
-11-12-2025 14:06:52-debug: web-desktop:(onBeforeCompressSettings) in 0 ms73%
-11-12-2025 14:06:52-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.79MB rss 251.39MB
-11-12-2025 14:06:52-debug: cocos-service:(onBeforeCompressSettings) start...73%
-11-12-2025 14:06:52-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (341ms)
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.84MB rss 251.44MB
-11-12-2025 14:06:52-debug: cocos-service:(onBeforeCompressSettings) in 341 ms74%
-11-12-2025 14:06:52-debug: // ---- build task Build import-map.json ----
-11-12-2025 14:06:52-debug: Build import-map.json start74%
-11-12-2025 14:06:52-debug: // ---- build task Build import-map.json ---- (1ms)
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.86MB rss 251.47MB
-11-12-2025 14:06:52-debug: run build task Build import-map.json success in 1 ms √75%
-11-12-2025 14:06:52-debug: // ---- build task Compress settings.json and config.json ----
-11-12-2025 14:06:52-debug: Compress settings.json and config.json start75%
-11-12-2025 14:06:52-debug: // ---- build task Compress settings.json and config.json ---- (5ms)
-11-12-2025 14:06:52-debug: run build task Compress settings.json and config.json success in 5 ms √76%
-11-12-2025 14:06:52-debug: Save config.json start76%
-11-12-2025 14:06:52-debug: // ---- build task Save config.json ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 191.97MB rss 252.16MB
-11-12-2025 14:06:52-debug: // ---- build task Save config.json ---- (1ms)
-11-12-2025 14:06:52-debug: Save Settings.json start77%
-11-12-2025 14:06:52-debug: // ---- build task Save Settings.json ----
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 192.16MB rss 252.16MB
-11-12-2025 14:06:52-debug: run build task Save config.json success in 1 ms √77%
-11-12-2025 14:06:52-debug: run build task Save Settings.json success in 0 ms √78%
-11-12-2025 14:06:52-debug: // ---- build task Sort build template ----
-11-12-2025 14:06:52-debug: Sort build template start78%
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 192.30MB rss 252.19MB
-11-12-2025 14:06:52-debug: // ---- build task Sort build template ---- (31ms)
-11-12-2025 14:06:52-debug: Process: heapTotal 203.45MB heapUsed 193.22MB rss 254.98MB
-11-12-2025 14:06:52-debug: run build task Sort build template success in 31 ms √79%
-11-12-2025 14:06:52-debug: // ---- build task cocos-service：onAfterCompressSettings ----
-11-12-2025 14:06:52-debug: cocos-service:(onAfterCompressSettings) start...79%
-11-12-2025 14:06:53-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (351ms)
-11-12-2025 14:06:53-debug: Process: heapTotal 203.45MB heapUsed 193.17MB rss 255.73MB
-11-12-2025 14:06:53-debug: web-desktop:(onAfterBuild) start...81%
-11-12-2025 14:06:53-debug: // ---- build task web-desktop：onAfterBuild ----
-11-12-2025 14:06:53-debug: cocos-service:(onAfterCompressSettings) in 351 ms81%
-11-12-2025 14:06:53-debug: // ---- build task web-desktop：onAfterBuild ---- (13ms)
-11-12-2025 14:06:53-debug: // ---- build task cocos-service：onAfterBuild ----
-11-12-2025 14:06:53-debug: cocos-service:(onAfterBuild) start...82%
-11-12-2025 14:06:53-debug: Process: heapTotal 203.45MB heapUsed 193.22MB rss 255.73MB
-11-12-2025 14:06:53-debug: web-desktop:(onAfterBuild) in 13 ms82%
-11-12-2025 14:06:53-debug: // ---- build task cocos-service：onAfterBuild ---- (109ms)
-11-12-2025 14:06:53-debug: cocos-service:(onAfterBuild) in 109 ms83%
-11-12-2025 14:06:53-debug: builder:build-project-total (36240ms)
-11-12-2025 14:06:53-debug: build success in 36240 ms!
-11-12-2025 14:06:53-debug: ================================ Build Task (web-desktop) Finished in (36244)ms ================================
-11-12-2025 14:07:01-debug: // ---- builder:run-build-stage-run ----
-11-12-2025 14:07:01-debug: init options success
-11-12-2025 14:07:01-debug: web-desktop:(run) start...
-11-12-2025 14:07:01-debug: // ---- build task web-desktop：run ----
-11-12-2025 14:07:01-debug: web-desktop:(run) in null ms √
-11-12-2025 14:07:01-log: [task:run]: success!
-11-12-2025 14:36:32-debug: Start build task, options:{"name":"CardDeck","platform":"web-desktop","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":false,"sourceMaps":false,"polyfills":{"asyncFunctions":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"merge_dep","replaceSplashScreen":false,"startScene":"24a765bf-bb0a-4b6c-90df-05afa81ad20a","outputName":"web-desktop","scenes":[{"url":"db://assets/test.scene","uuid":"24a765bf-bb0a-4b6c-90df-05afa81ad20a","inBundle":false}],"web-desktop":[],"packages":{"web-desktop":{"useWebGPU":false,"resolution":{"designWidth":1280,"designHeight":720},"__version__":"1.0.1"},"cocos-service":{"configID":"e750f3","services":[]}},"__version__":"1.3.3"}
-11-12-2025 14:36:32-debug: =================================== Build Task (web-desktop) Start ================================
-11-12-2025 14:36:32-debug: Process: heapTotal 214.05MB heapUsed 201.63MB rss 116.39MB
-11-12-2025 14:36:32-debug: cocos-service:(onBeforeBuild) start...0%
-11-12-2025 14:36:32-debug: Build with Cocos Creator 3.6.3
-11-12-2025 14:36:32-debug: // ---- build task cocos-service：onBeforeBuild ----
-11-12-2025 14:36:35-debug: // ---- build task cocos-service：onBeforeBuild ---- (2932ms)
-11-12-2025 14:36:35-debug: cocos-service:(onBeforeBuild) in 2932 ms2%
-11-12-2025 14:36:35-debug: Query all assets info in project
-11-12-2025 14:36:35-debug: init custom config: keepNodeUuid: false, useCache: true
-11-12-2025 14:36:35-debug: BuildAssetLibrary query-assets with assets 585
-11-12-2025 14:36:35-debug:   Number of other assets: 1676
-11-12-2025 14:36:35-debug: // ---- build task web-desktop：onAfterInit ----
-11-12-2025 14:36:35-debug: web-desktop:(onAfterInit) start...2%
-11-12-2025 14:36:35-debug: Process: heapTotal 214.77MB heapUsed 203.79MB rss 126.28MB
-11-12-2025 14:36:35-debug:   Number of all scenes: 1
-11-12-2025 14:36:35-debug:   Number of all scripts: 29
-11-12-2025 14:36:35-debug: BuildAssetLibrary initialized with asset 1201!
-11-12-2025 14:36:35-debug: // ---- build task web-desktop：onAfterInit ---- (77ms)
-11-12-2025 14:36:35-debug: web-desktop:(onAfterInit) in 77 ms3%
-11-12-2025 14:36:35-debug: cocos-service:(onAfterInit) start...3%
-11-12-2025 14:36:35-debug: // ---- build task cocos-service：onAfterInit ----
-11-12-2025 14:36:35-debug: Process: heapTotal 214.77MB heapUsed 203.87MB rss 139.58MB
-11-12-2025 14:36:35-debug: // ---- build task cocos-service：onAfterInit ---- (283ms)
-11-12-2025 14:36:35-debug: Process: heapTotal 214.77MB heapUsed 203.91MB rss 139.64MB
-11-12-2025 14:36:35-debug: localization-editor:(onAfterInit) start...4%
-11-12-2025 14:36:35-debug: // ---- build task localization-editor：onAfterInit ----
-11-12-2025 14:36:35-debug: cocos-service:(onAfterInit) in 283 ms4%
-11-12-2025 14:36:35-debug: // ---- build task localization-editor：onAfterInit ---- (3ms)
-11-12-2025 14:36:35-debug: Reload project scripts start4%
-11-12-2025 14:36:35-debug: Process: heapTotal 214.77MB heapUsed 203.94MB rss 139.73MB
-11-12-2025 14:36:35-debug: reload all scripts.
-11-12-2025 14:36:35-debug: localization-editor:(onAfterInit) in 3 ms4%
-11-12-2025 14:36:35-debug: // ---- build task Reload project scripts ----
-11-12-2025 14:36:35-debug: Incremental keys: 
-11-12-2025 14:36:35-debug: Set detail map pack:///resolution-detail-map.json: {}
-11-12-2025 14:36:35-debug: Unregister EventManager
-11-12-2025 14:36:35-debug: Unregister BGMEntry
-11-12-2025 14:36:35-debug: Unregister Card
-11-12-2025 14:36:35-debug: Unregister ChipButton
-11-12-2025 14:36:35-debug: Unregister SFXManager
-11-12-2025 14:36:35-debug: Unregister Poolable
-11-12-2025 14:36:35-debug: Unregister ObjectPool
-11-12-2025 14:36:35-debug: Unregister BetManager
-11-12-2025 14:36:35-debug: Unregister DeckManager
-11-12-2025 14:36:35-debug: Unregister GameManager
-11-12-2025 14:36:35-debug: Unregister UIManager
-11-12-2025 14:36:35-debug: Unregister BGMManager
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js'
-11-12-2025 14:36:35-debug: Unregister GenericPopup
-11-12-2025 14:36:35-debug: Unregister SFXEntry
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js'
-11-12-2025 14:36:35-debug: Unregister ChipEntry
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/67/67cc66ce12d7ea0a2546e0e0398cdd9fb748fa25.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/35/35492020a971386939e6895c15540718f2e28974.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js'
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js'
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
-11-12-2025 14:36:35-debug: Invalidating 'pack:///chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js'
-11-12-2025 14:36:35-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js is not in module cache!
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register BGMManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register SFXEntry
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register EventManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register SFXManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register Card
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register ChipButton
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register BGMEntry
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register Poolable
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register BetManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register DeckManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register ObjectPool
-11-12-2025 14:36:35-debug: [[Executor]] Register ChipEntry
-11-12-2025 14:36:35-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js is not in module cache!
-11-12-2025 14:36:35-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js is not in module cache!
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register GameManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js" loaded.
-11-12-2025 14:36:35-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/22/22c5dbdb2803f1844cd6709b998d21c9df597183.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/22/22c5dbdb2803f1844cd6709b998d21c9df597183.js is not in module cache!
-11-12-2025 14:36:35-debug: [[Executor]] Register GenericPopup
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/35/35492020a971386939e6895c15540718f2e28974.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Register UIManager
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/22/22c5dbdb2803f1844cd6709b998d21c9df597183.js" loaded.
-11-12-2025 14:36:35-debug: [[Executor]] Module "pack:///chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js" loaded.
-11-12-2025 14:36:35-debug: // ---- build task Reload project scripts ---- (21ms)
-11-12-2025 14:36:35-debug: Query asset bundle start6%
-11-12-2025 14:36:35-debug: // ---- build task Query asset bundle ----
-11-12-2025 14:36:35-debug: Process: heapTotal 214.77MB heapUsed 204.43MB rss 146.38MB
-11-12-2025 14:36:35-debug: run build task Reload project scripts success in 21 ms √6%
-11-12-2025 14:36:35-debug: // ---- build task Query asset bundle ---- (6ms)
-11-12-2025 14:36:35-debug: // ---- build task Query and organize assets ----
-11-12-2025 14:36:35-debug: run build task Query asset bundle success in 6 ms √7%
-11-12-2025 14:36:35-debug: Process: heapTotal 214.77MB heapUsed 204.47MB rss 146.42MB
-11-12-2025 14:36:35-debug: Query and organize assets start7%
-11-12-2025 14:36:35-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,871c3b6c-7379-419d-bda3-794b239ab90d
-11-12-2025 14:36:35-debug: Number of scenes: 1
-11-12-2025 14:36:35-debug: Number of assets: 800
-11-12-2025 14:36:35-debug: Number of asset bundle: 3
-11-12-2025 14:36:35-debug: // ---- build task Query and organize assets ---- (77ms)
-11-12-2025 14:36:35-debug: Organize scripts start8%
-11-12-2025 14:36:35-debug: sort script group...
-11-12-2025 14:36:35-debug: Process: heapTotal 224.16MB heapUsed 209.77MB rss 163.31MB
-11-12-2025 14:36:35-debug: run build task Query and organize assets success in 77 ms √8%
-11-12-2025 14:36:35-debug: // ---- build task Organize scripts ----
-11-12-2025 14:36:35-debug: run build task Organize scripts success in 0 ms √9%
-11-12-2025 14:36:35-debug: Organize texture compression tasks start9%
-11-12-2025 14:36:35-debug: // ---- build task Organize texture compression tasks ----
-11-12-2025 14:36:35-debug: Process: heapTotal 224.16MB heapUsed 209.81MB rss 163.31MB
-11-12-2025 14:36:35-debug: Number of image-compress task: 0
-11-12-2025 14:36:35-debug: // ---- build task Organize texture compression tasks ---- (42ms)
-11-12-2025 14:36:35-debug: // ---- build task Group json ----
-11-12-2025 14:36:35-debug: Number of json group: 235
-11-12-2025 14:36:35-debug: Process: heapTotal 224.16MB heapUsed 211.63MB rss 164.75MB
-11-12-2025 14:36:35-debug: run build task Organize texture compression tasks success in 42 ms √11%
-11-12-2025 14:36:35-debug: Group json start11%
-11-12-2025 14:36:35-debug: run build task Group json success in 3 ms √12%
-11-12-2025 14:36:35-debug: // ---- build task Group json ---- (3ms)
-11-12-2025 14:36:35-debug: Merging Texture2D json start12%
-11-12-2025 14:36:35-debug: // ---- build task Merging Texture2D json ----
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.03MB rss 176.20MB
-11-12-2025 14:36:35-debug: // ---- build task Merging Texture2D json ---- (7ms)
-11-12-2025 14:36:35-debug: Sort import-map.json start13%
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.65MB rss 199.89MB
-11-12-2025 14:36:35-debug: // ---- build task Sort import-map.json ----
-11-12-2025 14:36:35-debug: run build task Merging Texture2D json success in 7 ms √13%
-11-12-2025 14:36:35-debug: // ---- build task Sort import-map.json ---- (1ms)
-11-12-2025 14:36:35-debug: run build task Sort import-map.json success in 1 ms √14%
-11-12-2025 14:36:35-debug: web-desktop:(onBeforeBuildAssets) start...14%
-11-12-2025 14:36:35-debug: // ---- build task web-desktop：onBeforeBuildAssets ----
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.69MB rss 202.84MB
-11-12-2025 14:36:35-debug: web-desktop:(onBeforeBuildAssets) in 0 ms16%
-11-12-2025 14:36:35-debug: localization-editor:(onBeforeBuildAssets) start...16%
-11-12-2025 14:36:35-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.74MB rss 209.61MB
-11-12-2025 14:36:35-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (1ms)
-11-12-2025 14:36:35-debug: localization-editor:(onBeforeBuildAssets) in 1 ms17%
-11-12-2025 14:36:35-debug: Build auto-atlas start17%
-11-12-2025 14:36:35-debug: // ---- build task Build auto-atlas ----
-11-12-2025 14:36:35-debug: Start collect pack info
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.76MB rss 212.42MB
-11-12-2025 14:36:35-debug: // ---- build task Build auto-atlas ---- (1ms)
-11-12-2025 14:36:35-debug: run build task Build auto-atlas success in 1 ms √23%
-11-12-2025 14:36:35-debug: Compress Image start23%
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.82MB rss 215.33MB
-11-12-2025 14:36:35-debug: // ---- build task Compress Image ----
-11-12-2025 14:36:35-debug: run build task Compress Image success in 0 ms √30%
-11-12-2025 14:36:35-debug: Asset Bundle(internal) handle assets: 20
-11-12-2025 14:36:35-debug: Process: heapTotal 232.77MB heapUsed 210.84MB rss 217.41MB
-11-12-2025 14:36:35-debug: // ---- build task Copy the resource ----
-11-12-2025 14:36:35-debug: Copy the resource start30%
-11-12-2025 14:36:36-debug: Asset Bundle(resources) handle assets: 766
-11-12-2025 14:36:36-debug: Asset Bundle(main) handle assets: 35
-11-12-2025 14:36:36-debug: // ---- build task Copy the resource ---- (60ms)
-11-12-2025 14:36:36-debug: Build the grouped json and scatter files to the specified location start37%
-11-12-2025 14:36:36-debug: run build task Copy the resource success in 60 ms √37%
-11-12-2025 14:36:36-debug: Process: heapTotal 227.45MB heapUsed 195.31MB rss 243.92MB
-11-12-2025 14:36:36-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
-11-12-2025 14:36:36-debug: Json group(0846c28f0) compile success，json number: 6
-11-12-2025 14:36:36-debug: Json group(06961ca0a) compile success，json number: 6
-11-12-2025 14:36:36-debug: Json group(0120d75ae) compile success，json number: 6
-11-12-2025 14:36:36-debug: Json group(0ea339de8) compile success，json number: 6
-11-12-2025 14:36:36-debug: Json group(0a7642b6d) compile success，json number: 6
-11-12-2025 14:36:36-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (210ms)
-11-12-2025 14:36:36-debug: // ---- build task Build script ----
-11-12-2025 14:36:36-debug: Process: heapTotal 227.45MB heapUsed 196.23MB rss 255.05MB
-11-12-2025 14:36:36-debug: Build script start43%
-11-12-2025 14:36:36-debug: run build task Build the grouped json and scatter files to the specified location success in 210 ms √43%
-11-12-2025 14:36:39-debug: Build project script start...43%
-11-12-2025 14:36:39-debug: Process: heapTotal 230.45MB heapUsed 212.50MB rss 204.17MB
-11-12-2025 14:36:39-log: Run build task(build-script) in child, see: chrome://inspect/#devices
-11-12-2025 14:36:40-debug: excute-script over with build-script 1749ms
-11-12-2025 14:36:40-debug: Copy externalScripts success!
-11-12-2025 14:36:40-debug: Build project script in (1754 ms) √43%
-11-12-2025 14:36:40-debug: Build engine start...43%
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 208.12MB rss 170.00MB
-11-12-2025 14:36:40-debug: Use cache engine: {link(/var/folders/l6/84q609z97b9f3707xlssvg0c0000gn/T/CocosCreator/3.6.3/builder/engine/7864e746d6ce7ae2a13755cb0c6aa264)}
-11-12-2025 14:36:40-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","particle-2d","physics-2d-box2d","profiler","spine","tiled-map","tween","ui","video","webview"],"engineVersion":"3.6.3","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false,"WEBGPU":false},"entry":"/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine"}
-11-12-2025 14:36:40-debug: Build engine in (34 ms) √43%
-11-12-2025 14:36:40-debug: // ---- build task Build script ---- (4753ms)
-11-12-2025 14:36:40-debug: run build task Build script success in 4753 ms √50%
-11-12-2025 14:36:40-debug: Compress zip bundle start50%
-11-12-2025 14:36:40-debug: // ---- build task Compress zip bundle ----
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.47MB rss 175.44MB
-11-12-2025 14:36:40-debug: run build task Compress zip bundle success in 0 ms √57%
-11-12-2025 14:36:40-debug: Add md5 suffix to assets start57%
-11-12-2025 14:36:40-debug: // ---- build task Add md5 suffix to assets ----
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.52MB rss 175.80MB
-11-12-2025 14:36:40-debug: run build task Add md5 suffix to assets success in 0 ms √67%
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.54MB rss 175.83MB
-11-12-2025 14:36:40-debug: // ---- build task Init settings and config ----
-11-12-2025 14:36:40-debug: Init settings and config start67%
-11-12-2025 14:36:40-debug: // ---- build task Init settings and config ---- (1ms)
-11-12-2025 14:36:40-debug: run build task Init settings and config success in 1 ms √67%
-11-12-2025 14:36:40-debug: builder.tasks.settings.macro start67%
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.59MB rss 176.78MB
-11-12-2025 14:36:40-debug: // ---- build task builder.tasks.settings.macro ----
-11-12-2025 14:36:40-debug: builder.tasks.settings.macro does not defined in i18n
-11-12-2025 14:36:40-debug: run build task builder.tasks.settings.macro success in 0 ms √68%
-11-12-2025 14:36:40-debug: Sort some build options to settings.json start68%
-11-12-2025 14:36:40-debug: // ---- build task Sort some build options to settings.json ----
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.61MB rss 176.81MB
-11-12-2025 14:36:40-debug: // ---- build task Sort some build options to settings.json ---- (1ms)
-11-12-2025 14:36:40-debug: custom joint texture layouts start68%
-11-12-2025 14:36:40-debug: // ---- build task custom joint texture layouts ----
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.67MB rss 176.89MB
-11-12-2025 14:36:40-debug: run build task Sort some build options to settings.json success in 1 ms √68%
-11-12-2025 14:36:40-debug: // ---- build task custom joint texture layouts ---- (1ms)
-11-12-2025 14:36:40-debug: // ---- build task custom joint physics ----
-11-12-2025 14:36:40-debug: run build task custom joint texture layouts success in 1 ms √69%
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.70MB rss 176.91MB
-11-12-2025 14:36:40-debug: custom joint physics start69%
-11-12-2025 14:36:40-debug: run build task custom joint physics success in 0 ms √69%
-11-12-2025 14:36:40-debug: // ---- build task Fill script data to settings ----
-11-12-2025 14:36:40-debug: Fill script data to settings start69%
-11-12-2025 14:36:40-debug: Process: heapTotal 231.95MB heapUsed 209.72MB rss 176.91MB
-11-12-2025 14:36:41-debug: // ---- build task Fill script data to settings ---- (1ms)
-11-12-2025 14:36:41-debug: // ---- build task Fill scene data to settings ----
-11-12-2025 14:36:41-debug: Fill scene data to settings start70%
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 209.74MB rss 176.95MB
-11-12-2025 14:36:41-debug: run build task Fill script data to settings success in 1 ms √70%
-11-12-2025 14:36:41-debug: run build task Fill scene data to settings success in 0 ms √71%
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 209.76MB rss 176.98MB
-11-12-2025 14:36:41-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
-11-12-2025 14:36:41-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-11-12-2025 14:36:41-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 210.15MB rss 179.52MB
-11-12-2025 14:36:41-debug: options.md5Cache is false.
-11-12-2025 14:36:41-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-11-12-2025 14:36:41-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √71%
-11-12-2025 14:36:41-debug: Generate md5AssetsMap from suffixMap to settings start71%
-11-12-2025 14:36:41-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 0 ms √72%
-11-12-2025 14:36:41-debug: web-desktop:(onBeforeCompressSettings) start...72%
-11-12-2025 14:36:41-debug: // ---- build task web-desktop：onBeforeCompressSettings ----
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 210.19MB rss 179.61MB
-11-12-2025 14:36:41-debug: web-desktop:(onBeforeCompressSettings) in 0 ms73%
-11-12-2025 14:36:41-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 210.21MB rss 179.63MB
-11-12-2025 14:36:41-debug: cocos-service:(onBeforeCompressSettings) start...73%
-11-12-2025 14:36:41-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (133ms)
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 210.26MB rss 179.91MB
-11-12-2025 14:36:41-debug: cocos-service:(onBeforeCompressSettings) in 133 ms74%
-11-12-2025 14:36:41-debug: // ---- build task Build import-map.json ----
-11-12-2025 14:36:41-debug: Build import-map.json start74%
-11-12-2025 14:36:41-debug: run build task Build import-map.json success in 0 ms √75%
-11-12-2025 14:36:41-debug: Compress settings.json and config.json start75%
-11-12-2025 14:36:41-debug: // ---- build task Compress settings.json and config.json ----
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 210.28MB rss 179.92MB
-11-12-2025 14:36:41-debug: // ---- build task Compress settings.json and config.json ---- (3ms)
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 211.00MB rss 180.56MB
-11-12-2025 14:36:41-debug: Save config.json start76%
-11-12-2025 14:36:41-debug: // ---- build task Save config.json ----
-11-12-2025 14:36:41-debug: run build task Compress settings.json and config.json success in 3 ms √76%
-11-12-2025 14:36:41-debug: // ---- build task Save config.json ---- (1ms)
-11-12-2025 14:36:41-debug: run build task Save config.json success in 1 ms √77%
-11-12-2025 14:36:41-debug: // ---- build task Save Settings.json ----
-11-12-2025 14:36:41-debug: Save Settings.json start77%
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 211.19MB rss 180.56MB
-11-12-2025 14:36:41-debug: // ---- build task Save Settings.json ---- (1ms)
-11-12-2025 14:36:41-debug: // ---- build task Sort build template ----
-11-12-2025 14:36:41-debug: run build task Save Settings.json success in 1 ms √78%
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 211.32MB rss 180.63MB
-11-12-2025 14:36:41-debug: Sort build template start78%
-11-12-2025 14:36:41-debug: // ---- build task Sort build template ---- (14ms)
-11-12-2025 14:36:41-debug: run build task Sort build template success in 14 ms √79%
-11-12-2025 14:36:41-debug: cocos-service:(onAfterCompressSettings) start...79%
-11-12-2025 14:36:41-debug: // ---- build task cocos-service：onAfterCompressSettings ----
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 213.65MB rss 188.72MB
-11-12-2025 14:36:41-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (157ms)
-11-12-2025 14:36:41-debug: Process: heapTotal 231.95MB heapUsed 215.20MB rss 188.78MB
-11-12-2025 14:36:41-debug: cocos-service:(onAfterCompressSettings) in 157 ms81%
-11-12-2025 14:36:41-debug: // ---- build task web-desktop：onAfterBuild ----
-11-12-2025 14:36:41-debug: web-desktop:(onAfterBuild) start...81%
-11-12-2025 14:36:41-debug: // ---- build task web-desktop：onAfterBuild ---- (13ms)
-11-12-2025 14:36:41-debug: // ---- build task cocos-service：onAfterBuild ----
-11-12-2025 14:36:41-debug: cocos-service:(onAfterBuild) start...82%
-11-12-2025 14:36:41-debug: Process: heapTotal 232.45MB heapUsed 211.14MB rss 189.50MB
-11-12-2025 14:36:41-debug: web-desktop:(onAfterBuild) in 13 ms82%
-11-12-2025 14:36:41-debug: // ---- build task cocos-service：onAfterBuild ---- (155ms)
-11-12-2025 14:36:41-debug: cocos-service:(onAfterBuild) in 155 ms83%
-11-12-2025 14:36:41-debug: builder:build-project-total (9042ms)
-11-12-2025 14:36:41-debug: build success in 9042 ms!
-11-12-2025 14:36:41-debug: ================================ Build Task (web-desktop) Finished in (9045)ms ================================
-11-12-2025 14:37:58-debug: // ---- builder:run-build-stage-run ----
-11-12-2025 14:37:58-debug: init options success
-11-12-2025 14:37:58-debug: web-desktop:(run) start...
-11-12-2025 14:37:58-debug: // ---- build task web-desktop：run ----
-11-12-2025 14:37:58-debug: web-desktop:(run) in null ms √
-11-12-2025 14:37:58-log: [task:run]: success!
-11-12-2025 14:44:29-debug: Start build task, options:{"name":"CardDeck","platform":"web-desktop","buildPath":"project://build","debug":false,"md5Cache":false,"skipCompressTexture":false,"sourceMaps":false,"polyfills":{"asyncFunctions":true},"experimentalEraseModules":false,"useBuiltinServer":false,"mainBundleIsRemote":false,"mainBundleCompressionType":"merge_dep","replaceSplashScreen":false,"startScene":"24a765bf-bb0a-4b6c-90df-05afa81ad20a","outputName":"web-desktop","scenes":[{"url":"db://assets/test.scene","uuid":"24a765bf-bb0a-4b6c-90df-05afa81ad20a","inBundle":false}],"web-desktop":[],"packages":{"web-desktop":{"useWebGPU":false,"resolution":{"designWidth":1280,"designHeight":720},"__version__":"1.0.1"},"cocos-service":{"configID":"e750f3","services":[]}},"__version__":"1.3.3"}
-11-12-2025 14:44:29-debug: // ---- build task cocos-service：onBeforeBuild ----
-11-12-2025 14:44:29-debug: Process: heapTotal 220.17MB heapUsed 212.09MB rss 183.05MB
-11-12-2025 14:44:29-debug: Build with Cocos Creator 3.6.3
-11-12-2025 14:44:29-debug: =================================== Build Task (web-desktop) Start ================================
-11-12-2025 14:44:29-debug: cocos-service:(onBeforeBuild) start...0%
-11-12-2025 14:44:31-debug: // ---- build task cocos-service：onBeforeBuild ---- (2163ms)
-11-12-2025 14:44:31-debug: cocos-service:(onBeforeBuild) in 2163 ms2%
-11-12-2025 14:44:31-debug: Query all assets info in project
-11-12-2025 14:44:31-debug: init custom config: keepNodeUuid: false, useCache: true
-11-12-2025 14:44:31-debug: BuildAssetLibrary query-assets with assets 585
-11-12-2025 14:44:31-debug:   Number of other assets: 1676
-11-12-2025 14:44:31-debug: web-desktop:(onAfterInit) start...2%
-11-12-2025 14:44:31-debug: // ---- build task web-desktop：onAfterInit ----
-11-12-2025 14:44:31-debug: Process: heapTotal 221.64MB heapUsed 214.08MB rss 184.63MB
-11-12-2025 14:44:31-debug: BuildAssetLibrary initialized with asset 1201!
-11-12-2025 14:44:31-debug:   Number of all scripts: 29
-11-12-2025 14:44:31-debug:   Number of all scenes: 1
-11-12-2025 14:44:31-debug: // ---- build task web-desktop：onAfterInit ---- (59ms)
-11-12-2025 14:44:31-debug: // ---- build task cocos-service：onAfterInit ----
-11-12-2025 14:44:31-debug: cocos-service:(onAfterInit) start...3%
-11-12-2025 14:44:31-debug: Process: heapTotal 222.14MB heapUsed 214.25MB rss 185.31MB
-11-12-2025 14:44:31-debug: web-desktop:(onAfterInit) in 59 ms3%
-11-12-2025 14:44:31-debug: // ---- build task cocos-service：onAfterInit ---- (132ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 222.14MB heapUsed 214.29MB rss 185.31MB
-11-12-2025 14:44:31-debug: cocos-service:(onAfterInit) in 132 ms4%
-11-12-2025 14:44:31-debug: localization-editor:(onAfterInit) start...4%
-11-12-2025 14:44:31-debug: // ---- build task localization-editor：onAfterInit ----
-11-12-2025 14:44:31-debug: // ---- build task localization-editor：onAfterInit ---- (2ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 222.14MB heapUsed 214.32MB rss 185.34MB
-11-12-2025 14:44:31-debug: reload all scripts.
-11-12-2025 14:44:31-debug: Reload project scripts start4%
-11-12-2025 14:44:31-debug: localization-editor:(onAfterInit) in 2 ms4%
-11-12-2025 14:44:31-debug: // ---- build task Reload project scripts ----
-11-12-2025 14:44:31-debug: Incremental keys: 
-11-12-2025 14:44:31-debug: Set detail map pack:///resolution-detail-map.json: {}
-11-12-2025 14:44:31-debug: Unregister EventManager
-11-12-2025 14:44:31-debug: Unregister SFXManager
-11-12-2025 14:44:31-debug: Unregister Card
-11-12-2025 14:44:31-debug: Unregister ChipButton
-11-12-2025 14:44:31-debug: Unregister ChipEntry
-11-12-2025 14:44:31-debug: Unregister ObjectPool
-11-12-2025 14:44:31-debug: Unregister Poolable
-11-12-2025 14:44:31-debug: Unregister BetManager
-11-12-2025 14:44:31-debug: Unregister DeckManager
-11-12-2025 14:44:31-debug: Unregister GameManager
-11-12-2025 14:44:31-debug: Unregister UIManager
-11-12-2025 14:44:31-debug: Unregister BGMManager
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js'
-11-12-2025 14:44:31-debug: Unregister GenericPopup
-11-12-2025 14:44:31-debug: Unregister BGMEntry
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/f4/f483daf43da48d317290d9433d63b7640018a39b.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/22/22c5dbdb2803f1844cd6709b998d21c9df597183.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js'
-11-12-2025 14:44:31-debug: Unregister SFXEntry
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/35/35492020a971386939e6895c15540718f2e28974.js'
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js" loaded.
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js'
-11-12-2025 14:44:31-debug: Invalidating 'pack:///chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js'
-11-12-2025 14:44:31-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js is not in module cache!
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/4d/4d3621135f6f7d6e6345bdf0ba6f112469593ad1.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/47/479bc223c0b754a87d034c21d3f9134e3c9590d6.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register BGMManager
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/c5/c50911693357ccb6575d0b7ebc3215fd1764dd99.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/80/80a8902554817e71bbc20f7b997bc5de38d2ec6c.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/8f/8fd1d3a782fcd8114ff756788ea737d2641b5c45.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register EventManager
-11-12-2025 14:44:31-debug: [[Executor]] Register SFXEntry
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/73/73ae1025be556b152bf0454c44d6a7242252f231.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/f3/f38f4a4c49638f566e904c54ac823f83f9b77458.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/70/70a1e52c9ff8a91aa3dfd92151e7d0e472c2d802.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register Card
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/44/442755ea2e1b13547269b4b5ae5f3e7ee4ea2581.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/fc/fcfcba03734e5771efc1c4422d55e0716b96f9d7.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register ChipButton
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/86/866f7109b133fbedf929276bc03e60bc694a49e4.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register ChipEntry
-11-12-2025 14:44:31-debug: [[Executor]] Register SFXManager
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/19/19655d87eb6b8080a3517ca6ebe88b8dbf5fcf75.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register Poolable
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/6e/6ef76aea0af23aa8e372ef486d8a0aacb2a450b2.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/0c/0c34774cd6a9f2cfad146ae6016fc5304a723863.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register BGMEntry
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/b1/b14e6a6b7929b1c5ab56868057ad8b15d38a4df3.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/69/699d23e04403a29a4bb9385408cf005cc60c8f1d.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/94/9488db9f211411ff229eefee90fc0642ad328286.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/e5/e5252523447ad3d9033c732cafb553ebe9566c6d.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register BetManager
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/c1/c146e3fddf1cca54fd846964bd4398f00a6dfd25.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/b9/b9f3b9496ac62abe3c4e0a17e49502028e5d66e9.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/b2/b2e2ede5cf31fe40b4a11f77bee938f6f6a65b41.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register DeckManager
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/7d/7d1a4a290fbfa930633af6c9078eeb54117c50a8.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register ObjectPool
-11-12-2025 14:44:31-debug: /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/d8/d8a5446b63574fff0acbd2245aa1715561f7824c.js resolved to /Users/phuongduy/CardDeck/temp/programming/packer-driver/targets/editor/chunks/d8/d8a5446b63574fff0acbd2245aa1715561f7824c.js is not in module cache!
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/fa/fab4b8f85ae2afe5533587ef03bfea4124c2f534.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register UIManager
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/d8/d8a5446b63574fff0acbd2245aa1715561f7824c.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/d5/d533f9aa278ab8f862760e2b5ed2efe7a4d02562.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register GenericPopup
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/22/22c5dbdb2803f1844cd6709b998d21c9df597183.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/35/35492020a971386939e6895c15540718f2e28974.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/e7/e7e2c117e8b393918481ec93742ec02b455f0f40.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Register GameManager
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/3d/3da5c602a2424370fccd798e09dc140ebc8ae04c.js" loaded.
-11-12-2025 14:44:31-debug: [[Executor]] Module "pack:///chunks/e8/e8bf10c36dd751074d4b95f26bedd23f229e45e0.js" loaded.
-11-12-2025 14:44:31-debug: // ---- build task Reload project scripts ---- (13ms)
-11-12-2025 14:44:31-debug: run build task Reload project scripts success in 13 ms √6%
-11-12-2025 14:44:31-debug: Query asset bundle start6%
-11-12-2025 14:44:31-debug: // ---- build task Query asset bundle ----
-11-12-2025 14:44:31-debug: Process: heapTotal 222.39MB heapUsed 214.44MB rss 189.28MB
-11-12-2025 14:44:31-debug: // ---- build task Query asset bundle ---- (5ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 222.39MB heapUsed 214.49MB rss 189.28MB
-11-12-2025 14:44:31-debug: Query and organize assets start7%
-11-12-2025 14:44:31-debug: // ---- build task Query and organize assets ----
-11-12-2025 14:44:31-debug: run build task Query asset bundle success in 5 ms √7%
-11-12-2025 14:44:31-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,871c3b6c-7379-419d-bda3-794b239ab90d
-11-12-2025 14:44:31-debug: Number of scenes: 1
-11-12-2025 14:44:31-debug: Number of assets: 800
-11-12-2025 14:44:31-debug: Number of asset bundle: 3
-11-12-2025 14:44:31-debug: // ---- build task Query and organize assets ---- (64ms)
-11-12-2025 14:44:31-debug: // ---- build task Organize scripts ----
-11-12-2025 14:44:31-debug: sort script group...
-11-12-2025 14:44:31-debug: Organize scripts start8%
-11-12-2025 14:44:31-debug: run build task Query and organize assets success in 64 ms √8%
-11-12-2025 14:44:31-debug: Process: heapTotal 233.53MB heapUsed 220.70MB rss 203.70MB
-11-12-2025 14:44:31-debug: run build task Organize scripts success in 0 ms √9%
-11-12-2025 14:44:31-debug: // ---- build task Organize texture compression tasks ----
-11-12-2025 14:44:31-debug: Process: heapTotal 233.53MB heapUsed 220.74MB rss 203.70MB
-11-12-2025 14:44:31-debug: Organize texture compression tasks start9%
-11-12-2025 14:44:31-debug: Number of image-compress task: 0
-11-12-2025 14:44:31-debug: // ---- build task Organize texture compression tasks ---- (45ms)
-11-12-2025 14:44:31-debug: Group json start11%
-11-12-2025 14:44:31-debug: run build task Organize texture compression tasks success in 45 ms √11%
-11-12-2025 14:44:31-debug: // ---- build task Group json ----
-11-12-2025 14:44:31-debug: Process: heapTotal 234.14MB heapUsed 220.14MB rss 205.89MB
-11-12-2025 14:44:31-debug: Number of json group: 235
-11-12-2025 14:44:31-debug: // ---- build task Group json ---- (2ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 234.14MB heapUsed 221.52MB rss 205.92MB
-11-12-2025 14:44:31-debug: Merging Texture2D json start12%
-11-12-2025 14:44:31-debug: // ---- build task Merging Texture2D json ----
-11-12-2025 14:44:31-debug: run build task Group json success in 2 ms √12%
-11-12-2025 14:44:31-debug: // ---- build task Merging Texture2D json ---- (5ms)
-11-12-2025 14:44:31-debug: // ---- build task Sort import-map.json ----
-11-12-2025 14:44:31-debug: Sort import-map.json start13%
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 219.16MB rss 207.14MB
-11-12-2025 14:44:31-debug: run build task Merging Texture2D json success in 5 ms √13%
-11-12-2025 14:44:31-debug: run build task Sort import-map.json success in 0 ms √14%
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 219.20MB rss 207.14MB
-11-12-2025 14:44:31-debug: // ---- build task web-desktop：onBeforeBuildAssets ----
-11-12-2025 14:44:31-debug: web-desktop:(onBeforeBuildAssets) start...14%
-11-12-2025 14:44:31-debug: // ---- build task web-desktop：onBeforeBuildAssets ---- (1ms)
-11-12-2025 14:44:31-debug: web-desktop:(onBeforeBuildAssets) in 1 ms16%
-11-12-2025 14:44:31-debug: localization-editor:(onBeforeBuildAssets) start...16%
-11-12-2025 14:44:31-debug: // ---- build task localization-editor：onBeforeBuildAssets ----
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 219.25MB rss 207.16MB
-11-12-2025 14:44:31-debug: // ---- build task localization-editor：onBeforeBuildAssets ---- (1ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 219.27MB rss 207.17MB
-11-12-2025 14:44:31-debug: Start collect pack info
-11-12-2025 14:44:31-debug: Build auto-atlas start17%
-11-12-2025 14:44:31-debug: // ---- build task Build auto-atlas ----
-11-12-2025 14:44:31-debug: localization-editor:(onBeforeBuildAssets) in 1 ms17%
-11-12-2025 14:44:31-debug: // ---- build task Build auto-atlas ---- (1ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 219.33MB rss 207.17MB
-11-12-2025 14:44:31-debug: Compress Image start23%
-11-12-2025 14:44:31-debug: // ---- build task Compress Image ----
-11-12-2025 14:44:31-debug: run build task Build auto-atlas success in 1 ms √23%
-11-12-2025 14:44:31-debug: // ---- build task Compress Image ---- (1ms)
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 219.35MB rss 207.19MB
-11-12-2025 14:44:31-debug: run build task Compress Image success in 1 ms √30%
-11-12-2025 14:44:31-debug: // ---- build task Copy the resource ----
-11-12-2025 14:44:31-debug: Asset Bundle(internal) handle assets: 20
-11-12-2025 14:44:31-debug: Copy the resource start30%
-11-12-2025 14:44:31-debug: Asset Bundle(resources) handle assets: 766
-11-12-2025 14:44:31-debug: Asset Bundle(main) handle assets: 35
-11-12-2025 14:44:31-debug: // ---- build task Copy the resource ---- (44ms)
-11-12-2025 14:44:31-debug: // ---- build task Build the grouped json and scatter files to the specified location ----
-11-12-2025 14:44:31-debug: Build the grouped json and scatter files to the specified location start37%
-11-12-2025 14:44:31-debug: Process: heapTotal 243.39MB heapUsed 223.18MB rss 207.48MB
-11-12-2025 14:44:31-debug: run build task Copy the resource success in 44 ms √37%
-11-12-2025 14:44:31-debug: Json group(0846c28f0) compile success，json number: 6
-11-12-2025 14:44:31-debug: Json group(06961ca0a) compile success，json number: 6
-11-12-2025 14:44:31-debug: Json group(0120d75ae) compile success，json number: 6
-11-12-2025 14:44:31-debug: Json group(0ea339de8) compile success，json number: 6
-11-12-2025 14:44:31-debug: Json group(0a7642b6d) compile success，json number: 6
-11-12-2025 14:44:31-debug: // ---- build task Build the grouped json and scatter files to the specified location ---- (181ms)
-11-12-2025 14:44:31-debug: Build script start43%
-11-12-2025 14:44:31-debug: // ---- build task Build script ----
-11-12-2025 14:44:31-debug: Process: heapTotal 243.70MB heapUsed 224.04MB rss 211.95MB
-11-12-2025 14:44:31-debug: run build task Build the grouped json and scatter files to the specified location success in 181 ms √43%
-11-12-2025 14:44:34-debug: Build project script start...43%
-11-12-2025 14:44:34-debug: Process: heapTotal 252.09MB heapUsed 204.77MB rss 222.39MB
-11-12-2025 14:44:34-log: Run build task(build-script) in child, see: chrome://inspect/#devices
-11-12-2025 14:44:36-debug: excute-script over with build-script 1907ms
-11-12-2025 14:44:36-debug: Copy externalScripts success!
-11-12-2025 14:44:36-debug: Build project script in (1911 ms) √43%
-11-12-2025 14:44:36-debug: Build engine start...43%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 204.96MB rss 135.03MB
-11-12-2025 14:44:36-debug: Use cache engine: {link(/var/folders/l6/84q609z97b9f3707xlssvg0c0000gn/T/CocosCreator/3.6.3/builder/engine/7864e746d6ce7ae2a13755cb0c6aa264)}
-11-12-2025 14:44:36-debug: {"debug":false,"sourceMaps":false,"includeModules":["2d","animation","audio","base","dragon-bones","gfx-webgl","gfx-webgl2","intersection-2d","particle-2d","physics-2d-box2d","profiler","spine","tiled-map","tween","ui","video","webview"],"engineVersion":"3.6.3","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","flags":{"DEBUG":false,"WEBGPU":false},"entry":"/Applications/Cocos/Creator/3.6.3/CocosCreator.app/Contents/Resources/resources/3d/engine"}
-11-12-2025 14:44:36-debug: Build engine in (44 ms) √43%
-11-12-2025 14:44:36-debug: // ---- build task Build script ---- (4505ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.12MB rss 146.98MB
-11-12-2025 14:44:36-debug: run build task Build script success in 4505 ms √50%
-11-12-2025 14:44:36-debug: // ---- build task Compress zip bundle ----
-11-12-2025 14:44:36-debug: Compress zip bundle start50%
-11-12-2025 14:44:36-debug: run build task Compress zip bundle success in 0 ms √57%
-11-12-2025 14:44:36-debug: Add md5 suffix to assets start57%
-11-12-2025 14:44:36-debug: // ---- build task Add md5 suffix to assets ----
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.17MB rss 147.59MB
-11-12-2025 14:44:36-debug: // ---- build task Add md5 suffix to assets ---- (1ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.19MB rss 147.66MB
-11-12-2025 14:44:36-debug: run build task Add md5 suffix to assets success in 1 ms √67%
-11-12-2025 14:44:36-debug: // ---- build task Init settings and config ----
-11-12-2025 14:44:36-debug: Init settings and config start67%
-11-12-2025 14:44:36-debug: run build task Init settings and config success in 0 ms √67%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.23MB rss 148.30MB
-11-12-2025 14:44:36-debug: builder.tasks.settings.macro start67%
-11-12-2025 14:44:36-debug: // ---- build task builder.tasks.settings.macro ----
-11-12-2025 14:44:36-debug: builder.tasks.settings.macro does not defined in i18n
-11-12-2025 14:44:36-debug: // ---- build task builder.tasks.settings.macro ---- (1ms)
-11-12-2025 14:44:36-debug: Sort some build options to settings.json start68%
-11-12-2025 14:44:36-debug: // ---- build task Sort some build options to settings.json ----
-11-12-2025 14:44:36-debug: run build task builder.tasks.settings.macro success in 1 ms √68%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.26MB rss 148.33MB
-11-12-2025 14:44:36-debug: // ---- build task Sort some build options to settings.json ---- (1ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.32MB rss 148.58MB
-11-12-2025 14:44:36-debug: custom joint texture layouts start68%
-11-12-2025 14:44:36-debug: // ---- build task custom joint texture layouts ----
-11-12-2025 14:44:36-debug: run build task Sort some build options to settings.json success in 1 ms √68%
-11-12-2025 14:44:36-debug: // ---- build task custom joint texture layouts ---- (3ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.34MB rss 148.63MB
-11-12-2025 14:44:36-debug: custom joint physics start69%
-11-12-2025 14:44:36-debug: // ---- build task custom joint physics ----
-11-12-2025 14:44:36-debug: run build task custom joint texture layouts success in 3 ms √69%
-11-12-2025 14:44:36-debug: run build task custom joint physics success in 0 ms √69%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.36MB rss 148.66MB
-11-12-2025 14:44:36-debug: // ---- build task Fill script data to settings ----
-11-12-2025 14:44:36-debug: Fill script data to settings start69%
-11-12-2025 14:44:36-debug: run build task Fill script data to settings success in 0 ms √70%
-11-12-2025 14:44:36-debug: Fill scene data to settings start70%
-11-12-2025 14:44:36-debug: // ---- build task Fill scene data to settings ----
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.38MB rss 148.72MB
-11-12-2025 14:44:36-debug: run build task Fill scene data to settings success in 0 ms √71%
-11-12-2025 14:44:36-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
-11-12-2025 14:44:36-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.41MB rss 148.78MB
-11-12-2025 14:44:36-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
-11-12-2025 14:44:36-debug: Generate md5AssetsMap from suffixMap to settings start71%
-11-12-2025 14:44:36-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √71%
-11-12-2025 14:44:36-debug: options.md5Cache is false.
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.79MB rss 151.64MB
-11-12-2025 14:44:36-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-11-12-2025 14:44:36-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
-11-12-2025 14:44:36-debug: web-desktop:(onBeforeCompressSettings) start...72%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.83MB rss 151.78MB
-11-12-2025 14:44:36-debug: // ---- build task web-desktop：onBeforeCompressSettings ----
-11-12-2025 14:44:36-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √72%
-11-12-2025 14:44:36-debug: web-desktop:(onBeforeCompressSettings) in 0 ms73%
-11-12-2025 14:44:36-debug: cocos-service:(onBeforeCompressSettings) start...73%
-11-12-2025 14:44:36-debug: // ---- build task cocos-service：onBeforeCompressSettings ----
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.86MB rss 151.84MB
-11-12-2025 14:44:36-debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (237ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.90MB rss 152.30MB
-11-12-2025 14:44:36-debug: Build import-map.json start74%
-11-12-2025 14:44:36-debug: // ---- build task Build import-map.json ----
-11-12-2025 14:44:36-debug: cocos-service:(onBeforeCompressSettings) in 237 ms74%
-11-12-2025 14:44:36-debug: // ---- build task Build import-map.json ---- (1ms)
-11-12-2025 14:44:36-debug: // ---- build task Compress settings.json and config.json ----
-11-12-2025 14:44:36-debug: Compress settings.json and config.json start75%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.93MB rss 152.36MB
-11-12-2025 14:44:36-debug: run build task Build import-map.json success in 1 ms √75%
-11-12-2025 14:44:36-debug: // ---- build task Compress settings.json and config.json ---- (5ms)
-11-12-2025 14:44:36-debug: // ---- build task Save config.json ----
-11-12-2025 14:44:36-debug: Save config.json start76%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 207.67MB rss 153.88MB
-11-12-2025 14:44:36-debug: run build task Compress settings.json and config.json success in 5 ms √76%
-11-12-2025 14:44:36-debug: // ---- build task Save config.json ---- (1ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 207.86MB rss 154.09MB
-11-12-2025 14:44:36-debug: Save Settings.json start77%
-11-12-2025 14:44:36-debug: // ---- build task Save Settings.json ----
-11-12-2025 14:44:36-debug: run build task Save config.json success in 1 ms √77%
-11-12-2025 14:44:36-debug: run build task Save Settings.json success in 0 ms √78%
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 207.98MB rss 154.28MB
-11-12-2025 14:44:36-debug: // ---- build task Sort build template ----
-11-12-2025 14:44:36-debug: Sort build template start78%
-11-12-2025 14:44:36-debug: // ---- build task Sort build template ---- (20ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 205.14MB rss 172.25MB
-11-12-2025 14:44:36-debug: cocos-service:(onAfterCompressSettings) start...79%
-11-12-2025 14:44:36-debug: // ---- build task cocos-service：onAfterCompressSettings ----
-11-12-2025 14:44:36-debug: run build task Sort build template success in 20 ms √79%
-11-12-2025 14:44:36-debug: // ---- build task cocos-service：onAfterCompressSettings ---- (136ms)
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 206.50MB rss 173.63MB
-11-12-2025 14:44:36-debug: web-desktop:(onAfterBuild) start...81%
-11-12-2025 14:44:36-debug: // ---- build task web-desktop：onAfterBuild ----
-11-12-2025 14:44:36-debug: cocos-service:(onAfterCompressSettings) in 136 ms81%
-11-12-2025 14:44:36-debug: // ---- build task web-desktop：onAfterBuild ---- (14ms)
-11-12-2025 14:44:36-debug: web-desktop:(onAfterBuild) in 14 ms82%
-11-12-2025 14:44:36-debug: // ---- build task cocos-service：onAfterBuild ----
-11-12-2025 14:44:36-debug: Process: heapTotal 252.09MB heapUsed 208.15MB rss 176.27MB
-11-12-2025 14:44:36-debug: cocos-service:(onAfterBuild) start...82%
-11-12-2025 14:44:36-debug: // ---- build task cocos-service：onAfterBuild ---- (127ms)
-11-12-2025 14:44:36-debug: cocos-service:(onAfterBuild) in 127 ms83%
-11-12-2025 14:44:36-debug: builder:build-project-total (7843ms)
-11-12-2025 14:44:36-debug: build success in 7843 ms!
-11-12-2025 14:44:36-debug: ================================ Build Task (web-desktop) Finished in (7844)ms ================================

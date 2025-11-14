@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///Users/phuongduy/CardDeck/assets/scripts/CardAsset.ts"],"names":["CardAsset","backSpriteFrame"],"mappings":";;;;;;;;;;;;;;;;;;2BAEaA,S,GAAY;AACrBC,QAAAA,eAAe,EAAE;AADI,O","sourcesContent":["import { _decorator, SpriteFrame } from 'cc';\n\nexport const CardAsset = {\n    backSpriteFrame: null as SpriteFrame,\n};\n\n"]}

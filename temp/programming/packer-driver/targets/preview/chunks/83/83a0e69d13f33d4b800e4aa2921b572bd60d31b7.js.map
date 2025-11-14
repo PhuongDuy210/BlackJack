@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///Users/phuongduy/CardDeck/assets/scripts/enums/GameEvent.ts"],"names":["GameEvent"],"mappings":";;;;;;;;;;;;;;;;iBAAYA,S;AAAAA,QAAAA,S;AAAAA,QAAAA,S;AAAAA,QAAAA,S;SAAAA,S,yBAAAA,S","sourcesContent":["export enum GameEvent {\n    DECK_LOADED = 'deck-loaded',\n    GAME_STARTED = 'game-started',\n    GAME_ENDED = 'game-ended',\n}"]}
