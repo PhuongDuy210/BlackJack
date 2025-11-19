@@ -63,19 +63,19 @@ export class LogManager extends Component {
         let popupBtns = [];
         popupBtns.push(new PopupButtonData('Close'));
 
-        let tmpLogLines = [];
+        let logLines = [];
         this.gameHistory.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
         this.gameHistory.forEach(log => {
-            tmpLogLines.push("[" + log.getTimeStamp() + "]\t" + log.getContent());
+            logLines.push("[" + log.getTimeStamp() + "]\t" + log.getContent());
         });
 
         //Break log up into separate lines
         let allLogLines = [];
-        tmpLogLines.forEach(logLines => {
+        logLines.forEach(logLines => {
             allLogLines = allLogLines.concat(logLines.split("\n"));
         });
 
-        // let paginatedLogs = this.paginateLogs(allLogLines);
+        // let paginatedLogs = this.paginateLogs(logLines);
         let paginatedLogs = this.paginateLogs(allLogLines);
 
         let popupPages = [];
