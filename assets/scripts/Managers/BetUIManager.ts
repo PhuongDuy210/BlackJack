@@ -12,7 +12,7 @@ import { GenericAnimation } from '../Animation/GenericAnimation';
 const { ccclass, property } = _decorator;
 
 const MAX_STACK_COUNT = 5;
-const MAX_STACK_PER_TYPE = 4;
+const MAX_STACK_PER_TYPE = 3;
 
 @ccclass('BetUIManager')
 export class BetUIManager extends Component {
@@ -30,6 +30,9 @@ export class BetUIManager extends Component {
 
     @property(Prefab)
     private chipButtonPrefab: Prefab = null!;
+
+    @property(Prefab)
+    private chipPrefab: Prefab = null!;
 
     @property(Label)
     private totalBet: Label = null!;
@@ -67,7 +70,7 @@ export class BetUIManager extends Component {
         this.potArea.removeAllChildren();
         this.resetPot();
 
-        const anim = this.bettingArea.parent.getComponent(GenericAnimation);
+        const anim = this.bettingArea.parent.parent.getComponent(GenericAnimation);
         anim.setTargetAsOriginalPos();
         anim.animateEntry();
     }
@@ -98,8 +101,8 @@ export class BetUIManager extends Component {
     private addChip(chipEntry: ChipEntry) {
         const baseX = 0;
         const baseY = 0;    
-        const offsetX = 60;
-        const offsetY = 10;
+        const offsetX = 20;
+        const offsetY = 5;
 
         // Get current stack count and position
         let stackPositionY = 0;
@@ -119,7 +122,7 @@ export class BetUIManager extends Component {
             stackPositionY = stackPositionY - MAX_STACK_COUNT - 4;
         }
             
-        const chipNode = instantiate(this.chipButtonPrefab);
+        const chipNode = instantiate(this.chipPrefab);
         chipNode.setParent(this.potArea);
         const chipButton = chipNode.getComponent(ChipButton);
         chipButton.setup(chipEntry);
@@ -149,7 +152,8 @@ export class BetUIManager extends Component {
     }
 
     private onGameStarted() {
-        const anim = this.bettingArea.parent.getComponent(GenericAnimation);
+        const anim = this.bettingArea.parent.parent.getComponent(GenericAnimation);
+        anim.setTargetAsOriginalPos();
         anim.animateExit();
     }
 }

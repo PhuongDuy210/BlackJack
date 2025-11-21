@@ -1,5 +1,7 @@
 export enum GameEvent {
     GAMESTATE_CHANGED = 'game-state-change',
+    START_TIMER = 'start-timer',
+    TIME_UP = 'time-up',
     CHIP_ENTRY_READY = 'chip-entry-ready',
     CHIP_SELECTED = 'chip-selected',
     ADD_CHIP_UI = 'add-chip-ui',
@@ -9,6 +11,7 @@ export enum GameEvent {
     BET_PLACED = "bet-placed",
     ANIMATION_FINISHED = 'animation-finished',
     OFFER_INSURANCE = 'offer-insurance',
+    ACCEPT_INSURANCE = 'accept-insurance',
     SPLIT_HAND = 'split-hand',
     CHANGE_HAND = 'change-hand',
     DEALER_TURN_END = 'dealer-turn-end',

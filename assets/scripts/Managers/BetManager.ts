@@ -5,8 +5,11 @@ import { EventManager } from './EventManager';
 import { GameEvent } from '../enums/GameEvent';
 import { GameResult } from '../enums/GameResult';
 import { Player } from '../Player';
+import { Dealer } from '../Dealer';
 
 import { SFXID } from '../AudioSystem/SFXEnums';
+
+const INSURANCE_BET_RATE = 0.5;
 
 @ccclass('BetManager')
 export class BetManager extends Component {
@@ -20,9 +23,12 @@ export class BetManager extends Component {
     private currentBet: number = 0;
     private previousBet: ChipEntry[] = [];
 
+    private useInsurance: boolean = false;
+
     start() {
         EventManager.instance.gameEvents.on(GameEvent.CHIP_SELECTED, this.addChip, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_STARTED, this.placeBet, this);
+        EventManager.instance.gameEvents.on(GameEvent.ACCEPT_INSURANCE, this.onAcceptInsurance, this);
         EventManager.instance.gameEvents.on(GameEvent.SPLIT_HAND, this.placeBet, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_RESET, this.clearBet, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_ENDED, this.onGameEnded, this);
@@ -33,6 +39,7 @@ export class BetManager extends Component {
     onDestroy() {
         EventManager.instance.gameEvents.off(GameEvent.CHIP_SELECTED, this.addChip, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_STARTED, this.placeBet, this);
+        EventManager.instance.gameEvents.off(GameEvent.ACCEPT_INSURANCE, this.onAcceptInsurance, this);
         EventManager.instance.gameEvents.off(GameEvent.SPLIT_HAND, this.placeBet, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_RESET, this.clearBet, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_ENDED, this.onGameEnded, this);
@@ -64,9 +71,19 @@ export class BetManager extends Component {
         EventManager.instance.gameEvents.emit(GameEvent.BET_PLACED, -this.currentBet, this);
     }
 
-    private onGameEnded(gameResults: GameResult[], hands: Player[]) {
+    private onAcceptInsurance() {
+        this.useInsurance = true;
+        EventManager.instance.gameEvents.emit(GameEvent.BET_PLACED, -this.currentBet * 0.5, this);
+    }
+
+    private onGameEnded(gameResults: GameResult[], hands: Player[], dealer: Dealer) {
         this.previousBet = this.getSelectedChips();
         let totalPayout = 0;
+        if (this.useInsurance) {
+            if (dealer.hasBlackjack()) {
+                totalPayout += this.currentBet * INSURANCE_BET_RATE * 2;
+            }
+        }
         hands.forEach(hand => {
             const result = gameResults[hand.getIndex()];
             let multiplier = 1;

@@ -13,6 +13,7 @@ import { GenericPopup } from '../Popup/GenericPopup';
 import { PopupButtonData } from '../Popup/PopupButtonData';
 import { PopupPage } from '../Popup/PopupPage';
 
+import { GenericAnimation } from '../Animation/GenericAnimation';
 import { AnimationType } from '../enums/AnimationType';
 
 const { ccclass, property } = _decorator;
@@ -24,6 +25,8 @@ export class UIManager extends Component {
 
     @property({ type: GameStateEntry})
     private gameStateEntries: GameStateEntry[] = []!;
+
+    private buttonWrapperAnim: GenericAnimation = null!;
 
     @property(Button)
     private dealButton: Button = null!;
@@ -46,9 +49,17 @@ export class UIManager extends Component {
     @property(GenericPopup)
     private popup: GenericPopup = null!;
 
+    @property(GenericPopup)
+    private smallPopup: GenericPopup = null!;
+
+    @property(Label)
+    private timerLabel: Label = null!;
+
     private playerHandCount = 0;
 
+
     start() {
+        EventManager.instance.gameEvents.on(GameEvent.START_TIMER, this.onTimerStart, this);
         EventManager.instance.gameEvents.on(GameEvent.ADD_CHIP_UI, this.onChipAdd, this);
         EventManager.instance.gameEvents.on(GameEvent.GAME_STARTED, this.onGameStarted, this);
         EventManager.instance.gameEvents.on(GameEvent.OFFER_INSURANCE, this.showInsurancePopup, this);
@@ -65,6 +76,12 @@ export class UIManager extends Component {
 
     private resetUI() {
         console.log('Resetting UI...');
+        if (this.buttonWrapperAnim == null) {
+            const buttonWrapper = this.hitButton.node.parent.parent;
+            this.buttonWrapperAnim = buttonWrapper.getComponent(GenericAnimation);
+            this.buttonWrapperAnim.setTargetAsOriginalPos();
+        }
+        this.buttonWrapperAnim.animateExit();
         this.dealButton.interactable = false;
         this.dealButton.node.active = true;
         this.hitButton.node.active = false;
@@ -77,6 +94,7 @@ export class UIManager extends Component {
     }
 
     protected onDestroy(): void {
+        EventManager.instance.gameEvents.on(GameEvent.START_TIMER, this.onTimerStart, this);
         EventManager.instance.gameEvents.off(GameEvent.ADD_CHIP_UI, this.onChipAdd, this);
         EventManager.instance.gameEvents.off(GameEvent.SPLIT_HAND, this.disableSplitButton, this);
         EventManager.instance.gameEvents.off(GameEvent.GAME_STARTED, this.onGameStarted, this);
@@ -92,7 +110,25 @@ export class UIManager extends Component {
         this.dealButton.interactable = true;
     }
 
+    private onTimerStart(startTime: number) {
+        let remaining = startTime;
+        this.schedule(() => {
+            remaining--;
+            this.timerLabel.string = "Time left: " + remaining.toString();
+        
+            if (remaining <= 0) {
+                this.unscheduleAllCallbacks();
+            }
+        }, 1);
+    }
+
     private async onGameStarted(player: Player) {
+        if (this.buttonWrapperAnim == null) {
+            const buttonWrapper = this.dealButton.node.parent.parent;
+            this.buttonWrapperAnim = buttonWrapper.getComponent(GenericAnimation);
+            this.buttonWrapperAnim.setTargetAsOriginalPos();
+        }
+        this.buttonWrapperAnim.animateEntry();
         this.dealButton.node.active = false;
         this.hitButton.node.active = true;
         this.standButton.node.active = true;
@@ -144,15 +180,19 @@ export class UIManager extends Component {
         this.splitButton.interactable = false;
     }
 
-    private showInsurancePopup() {
+    private showInsurancePopup(callback?: () => void) {
         let insurancePopupBtns = [];
-        insurancePopupBtns.push(new PopupButtonData('Yes', this.useInsurance));
-        insurancePopupBtns.push(new PopupButtonData('No'));
-        this.popup.show('Insurance', 'Do you want to use Insurance?', insurancePopupBtns);
-    }
-
-    private useInsurance() {
-        //Emit insurance event here
+        insurancePopupBtns.push(new PopupButtonData('Yes', () => {
+            EventManager.instance.gameEvents.emit(GameEvent.ACCEPT_INSURANCE);
+            if (callback) callback();
+        }));
+        insurancePopupBtns.push(new PopupButtonData('No', () => {
+            if (callback) callback();
+        }));
+        // Fade for the popup mask, FlyTop for the popup
+        let entryAnims = [AnimationType.Fade, AnimationType.FlyTop];
+        let exitAnims = [AnimationType.Fade, AnimationType.FlyTop];
+        this.smallPopup.show('Notice', 'Do you want to use Insurance?\n(Payout 2:1)', insurancePopupBtns, entryAnims, exitAnims);
     }
 
     private lockInput() {

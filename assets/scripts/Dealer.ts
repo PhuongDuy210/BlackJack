@@ -6,7 +6,7 @@ export class Dealer extends Participant {
     }
 
     public hasAceFaceUp(): boolean {
-        return false;   // turn off for now
+        // return false;
         return this.hand[1].rank === 'A';
     }
 }

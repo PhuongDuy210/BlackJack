@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, Label, tween, Sprite } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, Label, tween, Sprite, Layout, UIOpacity } from 'cc';
 import { EventManager } from './EventManager';
 import { GameEvent } from '../enums/GameEvent';
 import { Card } from '../Card';
@@ -47,6 +47,10 @@ export class HandUIManager extends Component {
     private dealerAnimationInProgress: number = 0;
 
     private playerHandCount = 0;
+    private isAnimating: boolean = false;
+
+    // Array of functions that return Promise<void>
+    private pendingAnimations: Array<() => Promise<void>> = [];
 
     start() {
         EventManager.instance.gameEvents.on(GameEvent.GAME_STARTED, this.onGameStarted, this);
@@ -80,6 +84,8 @@ export class HandUIManager extends Component {
             resultSprite.node.active = false;
         });
 
+        this.playerCardContainers[1].parent.active = false;
+
         this.playerHandCount = 0;
     }
 
@@ -95,7 +101,23 @@ export class HandUIManager extends Component {
         this.playerHandCount++;
     }
 
-    async addCardToParticipant(participant: Participant) {
+    private onAllAnimationFinished() {
+        if (this.pendingAnimations.length === 0) {
+            EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED);
+        }
+    }
+
+    async playAnimation() {
+        this.isAnimating = true;
+        while (this.pendingAnimations.length > 0) {
+            const animFunc = this.pendingAnimations.shift()!;
+            await animFunc();
+        }
+        this.isAnimating = false;
+        this.schedule(this.onAllAnimationFinished, 0.2);
+    }
+    
+    private addCardToParticipant(participant: Participant) {
         let handArea = null;
         if (participant instanceof Player) {
             const handIndex = participant.getIndex();
@@ -106,9 +128,12 @@ export class HandUIManager extends Component {
         
         const hand = participant.getHand();
         for (let i = handArea.children.length; i < hand.length; i++) {
-            await this.animateCardToHand(participant, handArea);
+            this.pendingAnimations.push(() => this.animateCardToHand(participant, handArea));
+            this.unschedule(this.onAllAnimationFinished);
         }
-        EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED, participant);
+        if (!this.isAnimating) {
+            this.playAnimation();
+        }
     }
 
     async animateCardToHand(participant: Participant, handArea: Node): Promise<void> {
@@ -123,8 +148,17 @@ export class HandUIManager extends Component {
 
         // Get or create visual card node
         const cardNode = instantiate(this.cardPrefab);
+        
         let card = cardNode.addComponent(Card);
         card.init(latestCardData);
+        // Hide the card until it's ready for animating to avoid flickering
+        const uiOpacity = cardNode.addComponent(UIOpacity);
+        uiOpacity.opacity = 0;
+                
+        const ghostNode = instantiate(this.cardPrefab);
+        this.deckPosition.addChild(ghostNode);
+        let ghostCard = ghostNode.addComponent(Card);
+        ghostCard.init(latestCardData);
         
         // Add to scene
         let scoreLabel;
@@ -139,16 +173,22 @@ export class HandUIManager extends Component {
             scoreLabel = this.dealerScoreLabel;
         }
         handArea.addChild(cardNode);
-        
+        const layout = handArea.getComponent(Layout);
+        if (layout) {
+            layout.updateLayout();
+        }
+        const targetPos = cardNode.worldPosition.clone();
+
         // Position at deck first
-        cardNode.setWorldPosition(this.deckPosition.getWorldPosition());
+        ghostNode.setWorldPosition(this.deckPosition.getWorldPosition());
         
         // Animate to hand position
-        const targetPos = this.getCardTargetPosition(displayedCardCount);
         await new Promise<void>((resolve) => {
-            tween(cardNode)
-            .to(0.5, { position: targetPos })
+            tween(ghostNode)
+            .to(0.5, { worldPosition: targetPos })
             .call(async () => {
+                ghostNode.destroy();
+                uiOpacity.opacity = 255;
                 if (!latestCardData.isFaceDown) {
                     await card.flipCard();
                     this.checkRemainingAnimation(participant);
@@ -174,6 +214,7 @@ export class HandUIManager extends Component {
         EventManager.instance.gameEvents.emit(GameEvent.PLAY_SFX, SFXID.CardDeal);
         const originHandArea = this.playerCardContainers[0];
         const targetHandArea = this.playerCardContainers[1];
+        targetHandArea.parent.active = true;
 
         const targetCard = originHandArea.children[1];
         const worldPos = targetCard.worldPosition.clone();
@@ -208,7 +249,6 @@ export class HandUIManager extends Component {
         }
         if ((this.playerAnimationInProgress <= 0 && participant instanceof Player) ||
             (this.dealerAnimationInProgress <= 0 && participant instanceof Dealer)) {
-            console.log('All animations finished.');
             EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED, participant);
         }
     }
