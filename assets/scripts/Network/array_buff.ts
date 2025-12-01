@@ -322,7 +322,7 @@ namespace Responses {
         roomId: number; /* 4 bytes */
         target: string;
         playerId?: number;   /* optional depend on whether target is 'dealer' or 'player'*/
-        cardId?: number;     /* optional depend on playerId and who the reponse is sent too*/
+        cardIds?: number[];     /* optional depend on playerId and who the reponse is sent too*/
         isFaceDown: boolean;
         errorCode: number; /* 4 bytes */
         rooms: RoomResponse[];
@@ -332,7 +332,7 @@ namespace Responses {
             this.roomId = 0;
             this.target = 'player | dealer';
             this.playerId = 0;
-            this.cardId = -1;
+            this.cardIds = [];
             this.isFaceDown = true;
             this.errorCode = 0;
             this.rooms = [];

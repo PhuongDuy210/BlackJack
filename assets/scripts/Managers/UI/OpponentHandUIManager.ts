@@ -122,22 +122,6 @@ export class OpponentHandUIManager extends Component {
         this.playerHandCount++;
     }
 
-    private onAllAnimationFinished() {
-        this.isAnimating = false;
-        if (this.pendingAnimations.length === 0) {
-            EventManager.instance.gameEvents.emit(GameEvent.ANIMATION_FINISHED);
-        }
-    }
-
-    async playAnimation() {
-        this.isAnimating = true;
-        while (this.pendingAnimations.length > 0) {
-            const animFunc = this.pendingAnimations.shift()!;
-            await animFunc();
-        }
-        this.scheduleOnce(this.onAllAnimationFinished, 0.2);
-    }
-    
     private addCardToParticipant(participant: Participant) {
         if (!this.isActive) return;
         let handArea = null;
@@ -150,11 +134,7 @@ export class OpponentHandUIManager extends Component {
         
         const hand = participant.getHand();
         for (let i = handArea.children.length; i < hand.length; i++) {
-            this.pendingAnimations.push(() => this.animateCardToHand(participant, handArea));
-            this.unschedule(this.onAllAnimationFinished);
-        }
-        if (!this.isAnimating) {
-            this.playAnimation();
+            EventManager.instance.gameEvents.emit(GameEvent.QUEUE_ANIMATION, () => this.animateCardToHand(participant, handArea), this);
         }
     }
 
