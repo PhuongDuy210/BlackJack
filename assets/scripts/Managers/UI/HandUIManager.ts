@@ -49,10 +49,6 @@ export class HandUIManager extends Component {
     private dealerCardContainer: Node = null!;
 
     private playerHandCount = 0;
-    private isAnimating: boolean = false;
-
-    // Array of functions that return Promise<void>
-    private pendingAnimations: Array<() => Promise<void>> = [];
 
     start() {
         EventManager.instance.gameEvents.on(GameEvent.PLAYER_TURN_CHANGED, this.onPlayerTurnChange, this);

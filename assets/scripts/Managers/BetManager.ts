@@ -63,6 +63,7 @@ export class BetManager extends Component {
     public clearBet() {
         this.selectedChips = [];
         this.currentBet = 0;
+        this.useInsurance = false;
         EventManager.instance.gameEvents.emit(GameEvent.UPDATE_BET_VALUE, this.currentBet, this);
     }
 

@@ -130,6 +130,7 @@ export class GameManager extends Component {
 
     private startMyTurn() {
         EventManager.instance.gameEvents.emit(GameEvent.GAME_STARTED, this.currentPlayerHands[this.currentHandIndex]);
+        EventManager.instance.gameEvents.emit(GameEvent.UNLOCK_INPUT);
         // Check for immediate blackjack
         if (this.currentPlayerHands[this.currentHandIndex].hasBlackjack() || this.dealer.hasBlackjack()) {
             this.dealer.revealAll = true;
@@ -384,7 +385,6 @@ export class GameManager extends Component {
         } else {
             this.currentPlayerHands = this.getNextPlayerHands();
             if (this.currentPlayerID == this.myPlayerID) {
-                EventManager.instance.gameEvents.emit(GameEvent.UNLOCK_INPUT);
                 this.startMyTurn();
             }
         }
