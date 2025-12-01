@@ -39,9 +39,9 @@ export class GameManager extends Component {
         EventManager.instance.gameEvents.on(GameEvent.ANIMATION_FINISHED, this.onAnimationFinished, this);
         EventManager.instance.gameEvents.emit(GameEvent.GAMESTATE_CHANGED, this.gameState);
 
-        this.playerDatas.push(new PlayerData(1, 1000));
+        // this.playerDatas.push(new PlayerData(1, 1000));
         this.playerDatas.push(new PlayerData(this.myPlayerID, 1000));
-        this.playerDatas.push(new PlayerData(3, 1000));
+        // this.playerDatas.push(new PlayerData(3, 1000));
         this.playerDatas.forEach(playerData => {
             const player = [new Player(0, playerData.getID())]; 
             this.players.set(playerData.getID(), player);
@@ -69,8 +69,6 @@ export class GameManager extends Component {
                 if (this.currentPlayerID !== this.myPlayerID) {
                     this.startPhaseTimer();
                     EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
-                } else {
-                    this.startMyTurn();
                 }
                 return player;
             }
@@ -125,6 +123,9 @@ export class GameManager extends Component {
     private startGame() {
         this.changeGameState(GameState.PlayerTurn);
         this.currentPlayerHands = this.getNextPlayerHands();
+        if (this.currentPlayerID === this.myPlayerID) {
+            this.startMyTurn();
+        }
     }
 
     private startMyTurn() {
@@ -330,6 +331,7 @@ export class GameManager extends Component {
         EventManager.instance.gameEvents.emit(GameEvent.GAME_RESET);
         this.changeGameState(GameState.BetPhase);
         this.currentHandIndex = 0;
+        this.unscheduleAllCallbacks();
     }
     
     private changeGameState(gameState: GameState) {
@@ -375,14 +377,16 @@ export class GameManager extends Component {
             EventManager.instance.gameEvents.emit(GameEvent.LOCK_INPUT);
         }
         this.playersThisTurn.delete(this.currentPlayerID);
-        this.currentPlayerHands = this.getNextPlayerHands();
-        if (this.currentPlayerID == this.myPlayerID) {
-            EventManager.instance.gameEvents.emit(GameEvent.UNLOCK_INPUT);
-        }
         if (this.playersThisTurn.size <= 0) {
             console.log('All players turn ended');
             this.dealer.revealAll = true;
             this.dealerPlay();
+        } else {
+            this.currentPlayerHands = this.getNextPlayerHands();
+            if (this.currentPlayerID == this.myPlayerID) {
+                EventManager.instance.gameEvents.emit(GameEvent.UNLOCK_INPUT);
+                this.startMyTurn();
+            }
         }
     }
 }
