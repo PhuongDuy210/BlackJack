@@ -89,6 +89,10 @@ export class LogManager extends Component {
         let entryAnims = [AnimationType.Fade, AnimationType.FlyTop];
         let exitAnims = [AnimationType.Fade, AnimationType.FlyTop];
 
+        if (popupPages.length == 0) {
+            popupPages.push(new PopupPage(0, 'No Game History'));
+        }
+
         this.historyPopup.show('History', popupPages, popupBtns, entryAnims, exitAnims);
     }
 

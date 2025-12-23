@@ -1,14 +1,19 @@
+import { _decorator, SpriteFrame } from 'cc';
+
 import { EventManager } from './Managers/EventManager';
 import { GameEvent } from './enums/GameEvent';
 
 export class PlayerData {
     private ID: number;
     private money: number;
+    private avatar: SpriteFrame;
+    private name: string;
 
     constructor(ID: number, money: number) {
         this.ID = ID;
         this.money = 0;
         this.adjustMoney(money);
+
         EventManager.instance.gameEvents.on(GameEvent.PAYOUT, this.adjustMoney, this);
         EventManager.instance.gameEvents.on(GameEvent.BET_PLACED, this.adjustMoney, this);
     }
@@ -20,6 +25,14 @@ export class PlayerData {
     public getMoney(): number {
         return this.money;
     }
+
+    public getAvatar(): SpriteFrame {
+        return this.avatar;
+    }
+
+    public getName(): string {
+        return this.name;
+    }
     
     public adjustMoney(amount: number) {
         this.money += amount;
@@ -28,6 +41,6 @@ export class PlayerData {
 
     public dispose() {
         EventManager.instance.gameEvents.off(GameEvent.PAYOUT, this.adjustMoney, this);
-        EventManager.instance.gameEvents.on(GameEvent.BET_PLACED, this.adjustMoney, this);
+        EventManager.instance.gameEvents.off(GameEvent.BET_PLACED, this.adjustMoney, this);
     }
 }

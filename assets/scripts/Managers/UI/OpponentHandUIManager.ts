@@ -7,6 +7,8 @@ import { Participant } from '../../Participant';
 import { Player } from '../../Player';
 import { Dealer } from '../../Dealer';
 
+import { PlayerData } from '../../PlayerData';
+
 import { SFXID } from '../../AudioSystem/SFXEnums';
 
 const { ccclass, property } = _decorator;
@@ -50,10 +52,10 @@ export class OpponentHandUIManager extends Component {
         this.resetUI();
     }
 
-    private setupPlayer(playerID: number, avatar: SpriteFrame, name: string) {
-        this.playerID = playerID;
-        this.avatarSprite.spriteFrame = avatar;
-        this.playerName.string = name;
+    private setupPlayer(playerData: PlayerData) {
+        this.playerID = playerData.getID();
+        this.avatarSprite.spriteFrame = playerData.getAvatar();
+        this.playerName.string = playerData.getName();
     }
 
     private onPlayerTurnChange(playerID: number) {

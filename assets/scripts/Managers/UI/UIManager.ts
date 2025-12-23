@@ -216,9 +216,17 @@ export class UIManager extends Component {
         rulePopupBtns.push(new PopupButtonData('Close'));
 
         let popupPages = [];
-        popupPages.push(new PopupPage(0, 'Popup Page 1 Testing testing testing testing.  testinv v v.  testintestingvtesting'));
-        popupPages.push(new PopupPage(1, 'Popup Page 2 testing testing testing testing testing testing'));
-        popupPages.push(new PopupPage(2, 'Popup Page 3.  testintesting. testing testing testing.  testintesting testing testing testing \n testing v testing testing testing'));
+        popupPages.push(new PopupPage(0, '⁃	Player và Dealer chỉ có 2 lá. Dealer luôn có 1 lá úp cho tới khi mở bài (kết thúc game)\n'+
+	'⁃	Nếu player hoặc dealer được blackjack (1 lá A và 1 lá có giá trị = 10) thì auto thắng trừ khi người còn lại cũng có blackjack\n'+
+	'⁃	Player sau khi nhận được 2 lá ban đầu sẽ có 4 lựa chọn.\n'+
+	'+ Hit: rút thêm 1 lá, sau khi rút không kết thúc lượt\n'+
+	'+ Double: nhân đôi số cược, rút thêm 1 lá và kết thúc lượt\n'+
+	'+ Stand: không rút và kết thúc lượt. Player có thể Stand bất cứ lúc nào, không có tổng giá trị bài tối thiểu cần đạt được\n'+
+	'+ Split: player có thể tách 2 lá hiện tại của mình thành 2 tụ khác nhau với điều kiện là 2 lá phải cùng cấp (hiện tại cho mục đích test, player luôn luôn được phép split)'));
+        popupPages.push(new PopupPage(1, '⁃	Nếu player tổng giá trị bài trong tay vượt quá 21 (> 21) thì sẽ kết thúc lượt và bị tính là thua bất kể giá trị trong tay của Dealer là bao nhiêu\n'+
+	'⁃	Sau khi Player kết thúc lượt sẽ đến lượt của Dealer. Dealer luôn rút bài cho đến khi giá trị bài trong tay đạt ít nhất là 17, sau đó Dealer kết thúc lượt\n'+
+	'⁃	Sau khi Dealer kết thúc lượt, cả 2 bên cùng mở bài và so sánh tổng giá trị, bên nào cao hơn sẽ thắng\n'+
+	'⁃	Nếu Dealer có tổng giá trị bài trong tay vượt quá 21 (> 21) thì sẽ bị tính là thua bất kể giá trị trong tay của Player là bao nhiêu'));
         // Fade for the popup mask, FlyTop for the popup
         let entryAnims = [AnimationType.Fade, AnimationType.FlyTop];
         let exitAnims = [AnimationType.Fade, AnimationType.FlyTop];

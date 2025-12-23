@@ -3126,7 +3126,7 @@
         "__id__": 121
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 136
@@ -5550,7 +5550,7 @@
         "__id__": 186
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 196
@@ -6373,7 +6373,7 @@
         "__id__": 210
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 220
@@ -9105,7 +9105,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -89.07,
+      "x": -77.94999999999999,
       "y": 0,
       "z": 0
     },
@@ -9142,7 +9142,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 193.5,
+      "width": 126.76,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -9171,7 +9171,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Bet: $1000",
+    "_string": "Bet: $0",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 40,
@@ -9201,7 +9201,7 @@
     "__prefab": null,
     "_alignFlags": 10,
     "_target": null,
-    "_left": 0,
+    "_left": 11.119999999999997,
     "_right": 365.52,
     "_top": 0,
     "_bottom": 0,
@@ -9242,7 +9242,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 101.75,
+      "x": 79.5,
       "y": 0,
       "z": 0
     },
@@ -9338,7 +9338,7 @@
     "__prefab": null,
     "_alignFlags": 10,
     "_target": null,
-    "_left": 203.5,
+    "_left": 147.88,
     "_right": 365.52,
     "_top": 0,
     "_bottom": 0,
@@ -9367,7 +9367,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 371.64,
+      "width": 304.9,
       "height": 100
     },
     "_anchorPoint": {
@@ -9419,7 +9419,7 @@
     "__prefab": null,
     "_alignFlags": 9,
     "_target": null,
-    "_left": 10,
+    "_left": 43.370000000000005,
     "_right": 0,
     "_top": 50,
     "_bottom": 0,
@@ -9964,7 +9964,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "playerID": 2,
+    "playerID": 1,
     "resultEntries": [
       {
         "__id__": 300
@@ -10567,7 +10567,7 @@
       "__id__": 317
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 319
@@ -10618,7 +10618,7 @@
       "__id__": 113
     },
     "playerName": null,
-    "playerID": 1,
+    "playerID": 2,
     "cardPrefab": {
       "__uuid__": "9a36127a-c635-4c04-a0a8-6cc836be5d8a",
       "__expectedType__": "cc.Prefab"

@@ -48,7 +48,7 @@ export class BetUIManager extends Component {
 
     private chipButtons: ChipButton[] = [];
     private chipStacks: Map<number, number> = new Map(); // key: chip value, value: count
-    private chipStackPositions: Map<number, Vec2> = new Map(); // value Å® position
+    private chipStackPositions: Map<number, Vec2> = new Map(); // value ÔøΩÔøΩ position
 
     private potOriginalPos: Vec3;
 

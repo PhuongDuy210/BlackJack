@@ -19,7 +19,7 @@ export class GameManager extends Component {
 
     private playerDatas: PlayerData[] = [];
 
-    private myPlayerID = 2;
+    private myPlayerID = 1;
 
     private players: Map<number, Player[]> = new Map<number, Player[]>();
 
